@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -8,23 +11,100 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
+import NotesSection from "@/components/NotesSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
-    <div className="min-h-screen">
-      {/* <Navigation /> */}
+    <div className="min-h-screen transition-colors duration-500 bg-background">
+      <Navigation />
 
       <main>
         <HeroSection />
-        <AboutSection />
-        <EducationSection />
-        {/* <ProcessSection /> */}
-        <ExperienceSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <TestimonialsSection />
-        <ContactSection />
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <AboutSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <EducationSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <ExperienceSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <SkillsSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <ProjectsSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <NotesSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <TestimonialsSection />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <ContactSection />
+        </motion.div>
       </main>
 
       <Footer />
