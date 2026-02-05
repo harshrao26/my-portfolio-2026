@@ -22,13 +22,13 @@ export default function TestimonialCard({ quote, author, role, avatar }) {
                             className="object-cover"
                         />
                     ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-lime-400/20 to-lime-600/20 flex items-center justify-center text-lime-600 dark:text-lime-400 font-bold text-xl">
+                        <div className="w-full h-full bg-gradient-to-br from-lime-400/20 to-lime-600/20 flex items-center justify-center text-lime-600 dark:text-lime-400 font-semibold text-xl">
                             {author.charAt(0)}
                         </div>
                     )}
                 </div>
                 <div>
-                    <div className="font-bold text-foreground text-lg tracking-tight">{author}</div>
+                    <div className="font-semibold text-foreground text-lg tracking-tight">{author}</div>
                     <div className="text-sm text-foreground/40 font-medium uppercase tracking-widest">{role}</div>
                 </div>
             </div>

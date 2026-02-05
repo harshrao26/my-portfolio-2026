@@ -77,11 +77,11 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                 </div>
               )}
               <div className="flex flex-col md:flex-row md:items-center gap-4">
-                <h3 className="text-4xl md:text-6xl font-bold text-foreground tracking-tighter group-hover:translate-x-4 transition-transform duration-500">
+                <h3 className="text-3xl md:text-5xl font-semibold text-foreground tracking-tighter group-hover:translate-x-4 transition-transform duration-500">
                   {role}
                 </h3>
                 <span className="hidden md:block text-2xl text-foreground/20 group-hover:text-lime-600/30 dark:group-hover:text-lime-400/20 transition-colors">—</span>
-                <p className="text-2xl text-foreground/70 font-serif italic group-hover:text-foreground transition-colors">
+                <p className="text-xl md:text-2xl text-foreground/70 font-serif italic group-hover:text-foreground transition-colors">
                   {company}
                 </p>
               </div>
@@ -94,17 +94,17 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                 {/* Left Side: Summary & Impact */}
                 <div className="space-y-12">
                   <div className="space-y-6">
-                    <h4 className="text-foreground/30 text-[10px] font-bold uppercase tracking-[0.3em]">The Mission</h4>
-                    <p className="text-2xl md:text-3xl text-foreground/90 leading-tight">
+                    <h4 className="text-foreground/30 text-[10px] font-semibold uppercase tracking-[0.3em]">The Mission</h4>
+                    <p className="text-xl md:text-2xl text-foreground/90 leading-tight">
                       {summary}
                     </p>
                   </div>
 
                   <div className="space-y-6">
-                    <h4 className="text-lime-600 dark:text-lime-400 text-xs font-bold uppercase tracking-[0.2em]">Core Impact</h4>
+                    <h4 className="text-lime-600 dark:text-lime-400 text-xs font-semibold uppercase tracking-[0.2em]">Core Impact</h4>
                     <ul className="space-y-4">
                       {highlights.map((h, i) => (
-                        <li key={i} className="text-foreground/90 text-base md:text-lg flex gap-3 font-medium">
+                        <li key={i} className="text-foreground/90 text-sm md:text-base flex gap-3 font-medium">
                           <span className="text-lime-500">/</span>
                           {h}
                         </li>
@@ -116,8 +116,8 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                 {/* Right Side: Evolution, Milestones & Tech */}
                 <div className="flex flex-col gap-12">
                   <div className="space-y-6">
-                    <h4 className="text-foreground/40 text-xs font-bold uppercase tracking-[0.2em]">The Evolution</h4>
-                    <p className="text-foreground/70 text-base md:text-lg leading-relaxed italic font-serif">
+                    <h4 className="text-foreground/40 text-xs font-semibold uppercase tracking-[0.2em]">The Evolution</h4>
+                    <p className="text-foreground/70 text-sm md:text-base leading-relaxed italic font-serif">
                       {growth}
                     </p>
                   </div>
@@ -125,7 +125,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                   {/* Project Photos (Moved to Right) */}
                   {images && images.length > 0 && (
                     <div className="space-y-6">
-                      <h4 className="text-foreground/30 text-[10px] font-bold uppercase tracking-[0.3em]">Visual Milestones</h4>
+                      <h4 className="text-foreground/30 text-[10px] font-semibold uppercase tracking-[0.3em]">Visual Milestones</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {images.map((img, i) => (
                           <div
@@ -147,10 +147,10 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                   )}
 
                   <div className="mt-auto pt-8">
-                    <h4 className="text-foreground/20 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Tech Stack</h4>
+                    <h4 className="text-foreground/20 text-[10px] font-semibold uppercase tracking-[0.3em] mb-4">Tech Stack</h4>
                     <div className="flex flex-wrap gap-3">
                       {tech.map((t, i) => (
-                        <span key={i} className="px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-[10px] font-bold text-foreground/50 tracking-widest uppercase">
+                        <span key={i} className="px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-[10px] font-semibold text-foreground/50 tracking-widest uppercase">
                           {t}
                         </span>
                       ))}
@@ -184,7 +184,7 @@ export default function ExperienceSection() {
       logo: "/lawfinity.png",
       summary: (
         <>
-          Joined as the <span className="text-lime-600 dark:text-lime-400 font-bold underline decoration-lime-500/30 underline-offset-4 tracking-tight">Founding Technical Member</span> to build an IT department from absolute zero. Single-handedly managed the <span className="text-foreground font-bold italic">entire lifecycle:</span> from deep competitor research against market giants to the final <span className="text-foreground/80 font-medium">architecture, SEO strategy, and deployment.</span>
+          Joined as the <span className="text-lime-600 dark:text-lime-400 font-semibold underline decoration-lime-500/30 underline-offset-4 tracking-tight">Founding Technical Member</span> to build an IT department from absolute zero. Single-handedly managed the <span className="text-foreground font-semibold italic">entire lifecycle:</span> from deep competitor research against market giants to the final <span className="text-foreground/80 font-medium">architecture, SEO strategy, and deployment.</span>
         </>
       ),
       highlights: [
@@ -195,7 +195,7 @@ export default function ExperienceSection() {
       ],
       growth: (
         <>
-          I didn&apos;t just write code; I <span className="text-lime-500 font-bold italic">built a business engine.</span> Behind the scenes, I am currently architecting the private software that powers the firm&apos;s internal operations and sales performance.
+          I didn&apos;t just write code; I <span className="text-lime-500 font-semibold italic">built a business engine.</span> Behind the scenes, I am currently architecting the private software that powers the firm&apos;s internal operations and sales performance.
         </>
       ),
       tech: ["DigitalOcean", "Performance", "Technical SEO", "Full-Stack"],
@@ -208,7 +208,7 @@ export default function ExperienceSection() {
       logo: "/propques.png",
       summary: (
         <>
-          Joined as a <span className="text-lime-600 dark:text-lime-400 font-bold">Full-time Intern</span> in Oct 2024, promoted to <span className="text-lime-600 dark:text-lime-400 font-bold">Full-Stack Developer</span> within 30 days, and climbed to <span className="text-lime-600 dark:text-lime-400 font-bold underline decoration-lime-500/30 underline-offset-4">Team Leader within 6 months.</span> I orchestrated the intersection of high-end engineering and <span className="text-foreground font-bold italic">data-driven growth.</span>
+          Joined as a <span className="text-lime-600 dark:text-lime-400 font-semibold">Full-time Intern</span> in Oct 2024, promoted to <span className="text-lime-600 dark:text-lime-400 font-semibold">Full-Stack Developer</span> within 30 days, and climbed to <span className="text-lime-600 dark:text-lime-400 font-semibold underline decoration-lime-500/30 underline-offset-4">Team Leader within 6 months.</span> I orchestrated the intersection of high-end engineering and <span className="text-foreground font-semibold italic">data-driven growth.</span>
         </>
       ),
       highlights: [
@@ -219,7 +219,7 @@ export default function ExperienceSection() {
       ],
       growth: (
         <>
-          At Propques, I didn&apos;t just build features; I <span className="text-lime-500 font-bold italic">bridged the gap between code and commerce.</span> I actively collaborated with the <span className="text-foreground font-bold">Performance Marketing team</span> to optimize ad funnels, managed large-scale <span className="text-foreground font-bold underline decoration-foreground/20 underline-offset-4">SEO architectures</span>, and took full accountability for the technical health of a co-working consultancy giant.
+          At Propques, I didn&apos;t just build features; I <span className="text-lime-500 font-semibold italic">bridged the gap between code and commerce.</span> I actively collaborated with the <span className="text-foreground font-semibold">Performance Marketing team</span> to optimize ad funnels, managed large-scale <span className="text-foreground font-semibold underline decoration-foreground/20 underline-offset-4">SEO architectures</span>, and took full accountability for the technical health of a co-working consultancy giant.
         </>
       ),
       images: ["/Team Lead.jpeg", "/PropquesFulltime.jpeg"],
@@ -262,10 +262,10 @@ export default function ExperienceSection() {
 
       <div className="w-full px-6 md:px-12 lg:px-24 relative z-20 mb-32">
         <div className="max-w-4xl">
-          <h2 className="text-7xl md:text-9xl font-bold text-foreground tracking-tighter leading-none mb-8">
+          <h2 className="text-6xl md:text-7xl font-semibold text-foreground tracking-tighter leading-none mb-8">
             Work <span className="text-lime-600 dark:text-lime-400">History</span>
           </h2>
-          <p className="text-xl text-foreground/70 font-serif italic max-w-xl">
+          <p className="text-lg md:text-xl text-foreground/70 font-serif italic max-w-xl">
             Selected roles and professional milestones that defined my technical trajectory.
           </p>
         </div>
@@ -283,12 +283,12 @@ export default function ExperienceSection() {
 
       <div className="w-full px-6 md:px-12 lg:px-24 mt-32 relative z-20 flex flex-col md:flex-row justify-between items-center md:items-end border-t border-black/5 dark:border-white/10 pt-20">
         <div className="max-w-xs mt-10 text-center md:text-left">
-          <p className="text-xs text-foreground uppercase tracking-[0.3em] font-bold">Involvement</p>
+          <p className="text-xs text-foreground uppercase tracking-[0.3em] font-semibold">Involvement</p>
           <p className="mt-4 text-foreground/50 text-sm">Always looking to push the boundaries of what's possible in the digital realm.</p>
         </div>
         <MagneticButton strength={0.4}>
           <a href="/resume.pdf" download className="flex items-center gap-6 group mt-12 md:mt-0">
-            <span className="text-foreground text-3xl font-bold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</span>
+            <span className="text-foreground text-2xl md:text-4xl font-semibold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</span>
             <ArrowUpRight className="text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:rotate-45 transition-all duration-500 " />
           </a>
         </MagneticButton>

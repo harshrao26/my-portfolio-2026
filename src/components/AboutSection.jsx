@@ -62,21 +62,21 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
                 Engineering products <br />
                 with <span className="italic font-serif text-lime-600 dark:text-lime-400">precision</span> and
               </h2>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-tight text-foreground/40">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-foreground/40">
                 human-centric <span className="text-foreground/20">design.</span>
               </h2>
 
               <div className="mt-12 space-y-6">
-                <p className="text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg text-foreground/60 max-w-2xl mx-auto leading-relaxed">
                   I bridge the gap between complex technical infrastructure and intuitive user interfaces, ensuring performance never compromises aesthetics.
                 </p>
                 <div className="glass-strong p-6 rounded-3xl max-w-2xl mx-auto border border-lime-500/10">
-                  <p className="text-lg text-foreground/70 leading-relaxed ita lic">
-                    Expert in <span className="text-lime-600 dark:text-lime-400 font-bold">Technical, On-page, and Off-page SEO.</span> I don&apos;t just build websites; I architect search-optimized experiences that dominate rankings and drive organic growth.
+                  <p className="text-base text-foreground/70 leading-relaxed ita lic">
+                    Expert in <span className="text-lime-600 dark:text-lime-400 font-semibold">Technical, On-page, and Off-page SEO.</span> I don&apos;t just build websites; I architect search-optimized experiences that dominate rankings and drive organic growth.
                   </p>
                 </div>
               </div>

@@ -38,7 +38,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
                     {/* Social links */}
                     <div className="space-y-6">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Connect</p>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/30">Connect</p>
                         <div className="flex flex-wrap gap-4">
                             {[
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/harsh-d-rao/" },
@@ -57,7 +57,7 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <div className="space-y-6">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Navigation</p>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/30">Navigation</p>
                         <ul className="space-y-4">
                             {['Work', 'About', 'Experience', 'Notes', 'Contact'].map((item) => (
                                 <li key={item}>
@@ -71,7 +71,7 @@ export default function Footer() {
 
                     {/* Availability */}
                     <div className="space-y-6 md:col-span-2">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Current Status</p>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/30">Current Status</p>
                         <div className="flex items-center gap-3">
                             <span className="w-2 h-2 rounded-full bg-lime-500 animate-pulse" />
                             <p className="text-lg font-medium text-foreground tracking-tight">
@@ -92,7 +92,7 @@ export default function Footer() {
                             <a href="#" className="text-foreground/30 hover:text-foreground text-xs transition-colors">Terms of Use</a>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2 text-foreground/20 text-[10px] font-bold uppercase tracking-[0.2em]">
+                    <div className="flex items-center gap-2 text-foreground/20 text-[10px] font-semibold uppercase tracking-[0.2em]">
                         <span>v2.4.0</span>
                     </div>
                 </div>

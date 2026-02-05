@@ -42,13 +42,13 @@ export default function ContactSection() {
                         <div className="max-w-xl">
                             <div className="flex items-center gap-2 mb-6">
                                 <div className="w-10 h-[1px] bg-lime-500 dark:bg-lime-400" />
-                                <span className="text-lime-600 dark:text-lime-400 font-bold text-xs uppercase tracking-widest">Contact</span>
+                                <span className="text-lime-600 dark:text-lime-400 font-semibold text-xs uppercase tracking-widest">Contact</span>
                             </div>
-                            <h2 className="text-6xl md:text-8xl font-bold text-foreground mb-8 tracking-tighter leading-[0.9]">
+                            <h2 className="text-5xl md:text-7xl font-semibold text-foreground mb-8 tracking-tighter leading-[0.95]">
                                 Let's build <br />
                                 something <span className="italic font-serif font-normal text-lime-600 dark:text-lime-400">extraordinary</span>.
                             </h2>
-                            <p className="text-foreground/60 text-lg leading-relaxed">
+                            <p className="text-foreground/60 text-base leading-relaxed">
                                 Whether you're interested in a new project, collaboration, or just want to say hi, my inbox is always open.
                             </p>
                         </div>
@@ -59,8 +59,8 @@ export default function ContactSection() {
                                     <Mail className="text-lime-600 dark:text-lime-400" size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">Email me</p>
-                                    <a href="mailto:harshurao058@gmail.com" className="text-lg font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Email me</p>
+                                    <a href="mailto:harshurao058@gmail.com" className="text-base font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
                                         harshurao058@gmail.com
                                     </a>
                                 </div>
@@ -71,8 +71,8 @@ export default function ContactSection() {
                                     <Phone className="text-lime-600 dark:text-lime-400" size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">Call me</p>
-                                    <a href="tel:+917233811034" className="text-lg font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Call me</p>
+                                    <a href="tel:+917233811034" className="text-base font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
                                         +91 7233811034
                                     </a>
                                 </div>
@@ -83,8 +83,8 @@ export default function ContactSection() {
                                     <MapPin className="text-lime-600 dark:text-lime-400" size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">Location</p>
-                                    <p className="text-lg font-medium text-foreground tracking-tight">
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Location</p>
+                                    <p className="text-base font-medium text-foreground tracking-tight">
                                         Lucknow, India — Available Globally
                                     </p>
                                 </div>
@@ -98,7 +98,7 @@ export default function ContactSection() {
                             <form onSubmit={handleSubmit} className="space-y-10">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 px-1">Full Name</label>
+                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Full Name</label>
                                         <input
                                             type="text"
                                             name="name"
@@ -110,7 +110,7 @@ export default function ContactSection() {
                                         />
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 px-1">Email Address</label>
+                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Email Address</label>
                                         <input
                                             type="email"
                                             name="email"
@@ -124,7 +124,7 @@ export default function ContactSection() {
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 px-1">Message</label>
+                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Message</label>
                                     <textarea
                                         name="message"
                                         value={formData.message}
@@ -141,7 +141,7 @@ export default function ContactSection() {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="group flex items-center gap-4 px-12 py-5 bg-foreground text-background rounded-full font-bold transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
+                                            className="group flex items-center gap-4 px-12 py-5 bg-foreground text-background rounded-full font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
                                         >
                                             {isSubmitting ? 'Sending...' : 'Send Message'}
                                             <div className="w-8 h-8 rounded-full bg-lime-500 flex items-center justify-center transition-transform group-hover:rotate-45">

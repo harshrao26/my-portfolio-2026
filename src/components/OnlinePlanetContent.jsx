@@ -76,7 +76,7 @@ const RoleCard = ({ title, features, role }) => (
                 {role}
             </span>
         </div>
-        <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-4">
+        <h3 className="text-3xl font-semibold text-white mb-8 flex items-center gap-4">
             <div className="w-2 h-10 bg-lime-500 rounded-full" />
             {title}
         </h3>
@@ -99,9 +99,9 @@ const SectionTitle = ({ children, subtitle, icon: Icon }) => (
             <div className="p-3 rounded-2xl bg-lime-400/10 text-lime-400">
                 <Icon size={24} />
             </div>
-            <span className="text-lime-500 font-bold text-xs uppercase tracking-[0.3em]">{subtitle}</span>
+            <span className="text-lime-500 font-semibold text-xs uppercase tracking-[0.3em]">{subtitle}</span>
         </div>
-        <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">{children}</h2>
+        <h2 className="text-4xl md:text-6xl font-semibold text-white tracking-tighter">{children}</h2>
     </div>
 );
 
@@ -111,7 +111,7 @@ const FeatureList = ({ items }) => (
             <div key={i} className="flex gap-4 p-6 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] transition-all">
                 <CheckCircle2 className="text-lime-500 shrink-0 mt-1" size={18} />
                 <div>
-                    <h4 className="text-white font-bold mb-1">{item.title}</h4>
+                    <h4 className="text-white font-semibold mb-1">{item.title}</h4>
                     <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                 </div>
             </div>
@@ -129,7 +129,7 @@ const ImagePlaceholder = ({ label, height = "500px", description }) => (
                 <ImageIcon className="text-zinc-600 group-hover:text-lime-500" size={40} />
             </div>
             <div className="text-center">
-                <p className="text-zinc-500 text-sm font-bold tracking-[0.2em] uppercase mb-1">{label || "Module Interface"}</p>
+                <p className="text-zinc-500 text-sm font-semibold tracking-[0.2em] uppercase mb-1">{label || "Module Interface"}</p>
                 <p className="text-zinc-700 text-xs italic">High-fidelity visualization pending</p>
             </div>
         </div>
@@ -164,35 +164,35 @@ const ArchitectureIllustration = () => (
                 <circle cx="400" cy="200" r="40" fill="rgba(163,230,53,0.1)" stroke="#a3e635" strokeWidth="1" strokeDasharray="5 5" />
             </motion.g>
             <circle cx="400" cy="200" r="30" fill="#a3e635" className="opacity-20" />
-            <text x="400" y="205" textAnchor="middle" className="fill-lime-400 text-[10px] font-bold tracking-widest uppercase">CORE</text>
+            <text x="400" y="205" textAnchor="middle" className="fill-lime-400 text-[10px] font-semibold tracking-widest uppercase">CORE</text>
 
             {/* Admin Node */}
             <motion.g whileHover={{ scale: 1.1 }}>
                 <rect x="350" y="60" width="100" height="40" rx="20" fill="#18181b" stroke="rgba(255,255,255,0.1)" />
-                <text x="400" y="85" textAnchor="middle" className="fill-white text-[10px] font-bold uppercase">Admin Panel</text>
+                <text x="400" y="85" textAnchor="middle" className="fill-white text-[10px] font-semibold uppercase">Admin Panel</text>
             </motion.g>
 
             {/* Seller Node */}
             <motion.g whileHover={{ scale: 1.1 }}>
                 <rect x="150" y="180" width="100" height="40" rx="20" fill="#18181b" stroke="rgba(255,255,255,0.1)" />
-                <text x="200" y="205" textAnchor="middle" className="fill-white text-[10px] font-bold uppercase">Seller Hub</text>
+                <text x="200" y="205" textAnchor="middle" className="fill-white text-[10px] font-semibold uppercase">Seller Hub</text>
             </motion.g>
 
             {/* Customer Node */}
             <motion.g whileHover={{ scale: 1.1 }}>
                 <rect x="550" y="180" width="100" height="40" rx="20" fill="#18181b" stroke="rgba(255,255,255,0.1)" />
-                <text x="600" y="205" textAnchor="middle" className="fill-white text-[10px] font-bold uppercase">Customer App</text>
+                <text x="600" y="205" textAnchor="middle" className="fill-white text-[10px] font-semibold uppercase">Customer App</text>
             </motion.g>
 
             {/* Logistics & AI Nodes */}
             <motion.g whileHover={{ scale: 1.1 }}>
                 <rect x="350" y="300" width="100" height="40" rx="20" fill="#a3e635" stroke="none" />
-                <text x="400" y="325" textAnchor="middle" className="fill-black text-[10px] font-bold uppercase">AI & Logistics</text>
+                <text x="400" y="325" textAnchor="middle" className="fill-black text-[10px] font-semibold uppercase">AI & Logistics</text>
             </motion.g>
         </svg>
 
         <div className="absolute bottom-6 left-8 right-8 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
-            <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Sovereign Data Flow</p>
+            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Sovereign Data Flow</p>
             <div className="flex gap-2">
                 <div className="w-1 h-1 rounded-full bg-lime-500 animate-pulse" />
                 <div className="w-1 h-1 rounded-full bg-lime-500 animate-pulse delay-75" />
@@ -251,7 +251,7 @@ export default function OnlinePlanetContent() {
                     >
                         <Link
                             href="/#work"
-                            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-lime-400 text-xs font-bold uppercase tracking-widest mb-16 hover:bg-white/10 transition-all"
+                            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-lime-400 text-xs font-semibold uppercase tracking-widest mb-16 hover:bg-white/10 transition-all"
                         >
                             <ArrowLeft size={16} /> Back to Showcase
                         </Link>
@@ -261,7 +261,7 @@ export default function OnlinePlanetContent() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1, duration: 0.8 }}
-                        className="text-7xl md:text-9xl font-bold text-white mb-10 tracking-tighter leading-none"
+                        className="text-7xl md:text-9xl font-semibold text-white mb-10 tracking-tighter leading-none"
                     >
                         Online <span className="italic font-serif font-normal text-lime-400">Planet</span>
                     </motion.h1>
@@ -294,7 +294,7 @@ export default function OnlinePlanetContent() {
                                 <div className="w-8 h-8 relative flex items-center justify-center  group-hover:-0 group-hover:scale-110 transition-all duration-500">
                                     <img src={tech.logo} alt={tech.name} className="w-full h-full object-contain" />
                                 </div>
-                                <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">{tech.name}</span>
+                                <span className="text-[10px] font-semibold text-gray-400 tracking-widest uppercase">{tech.name}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -313,29 +313,29 @@ export default function OnlinePlanetContent() {
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 items-start">
                         <div className="space-y-12">
                             <div className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5">
-                                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                                <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
                                     <Workflow className="text-lime-400" size={24} />
                                     Technical Implementation
                                 </h3>
                                 <div className="flex flex-wrap gap-6 mb-10">
                                     <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/5 border border-white/10 group/logistics hover:border-lime-500/30 transition-all">
                                         <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/90c1773c-fe14-47f4-9234-fa313d1f8eee/image.png?t=1713811990" className="w-6 h-6 object-contain  group-hover/logistics:-0 transition-all" alt="Shiprocket" />
-                                        <span className="text-xs font-bold text-white uppercase tracking-widest">Shiprocket</span>
+                                        <span className="text-xs font-semibold text-white uppercase tracking-widest">Shiprocket</span>
                                     </div>
                                     <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/5 border border-white/10 group/logistics hover:border-lime-500/30 transition-all">
                                         <img src="https://static-assets-web.flixcart.com/ekart-assets/assets/fonts/ekblueLogo.e2611ca7449dd40e420e1620f973a5e4.png" className="w-6 h-6 object-contain  group-hover/logistics:-0 transition-all" alt="Ekart" />
-                                        <span className="text-xs font-bold text-white uppercase tracking-widest">Ekart</span>
+                                        <span className="text-xs font-semibold text-white uppercase tracking-widest">Ekart</span>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-4">
-                                        <p className="text-lime-500 font-bold text-sm uppercase tracking-widest">Multi-Carrier Handshake</p>
+                                        <p className="text-lime-500 font-semibold text-sm uppercase tracking-widest">Multi-Carrier Handshake</p>
                                         <p className="text-gray-400 text-sm leading-relaxed text-justify">
                                             Engineered a robust direct API integration layer with <span className="text-white italic">Shiprocket & Ekart</span>. We implemented an event-driven webhook architecture that processes 15+ status checkpoints (Manifested to Delivered) in real-time.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <p className="text-lime-500 font-bold text-sm uppercase tracking-widest">Dynamic Routing Algorithim</p>
+                                        <p className="text-lime-500 font-semibold text-sm uppercase tracking-widest">Dynamic Routing Algorithim</p>
                                         <p className="text-gray-400 text-sm leading-relaxed text-justify">
                                             The "Sentient Carrier Selection" logic uses a priority-weighted algorithm that ranks couriers based on real-time performance data for specific pincodes, favoring cost-efficiency without sacrificing speed.
                                         </p>
@@ -345,7 +345,7 @@ export default function OnlinePlanetContent() {
 
                             <div className="space-y-10">
                                 <div className="space-y-6">
-                                    <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.3em]">Operational Mastery</h4>
+                                    <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.3em]">Operational Mastery</h4>
                                     <p className="text-xl md:text-2xl text-gray-300 leading-relaxed italic border-l-2 border-lime-500 pl-10">
                                         The platform features deep, direct integrations with major logistics providers (comparable to Amazon's and Flipkart's internal systems).
                                     </p>
@@ -367,11 +367,11 @@ export default function OnlinePlanetContent() {
                                 <div className="space-y-6">
                                     <div>
                                         <h4 className="text-4xl font-black tracking-tighter">80%</h4>
-                                        <p className="font-bold text-sm uppercase leading-tight">Reduction in Manual <br /> RTO Intervention</p>
+                                        <p className="font-semibold text-sm uppercase leading-tight">Reduction in Manual <br /> RTO Intervention</p>
                                     </div>
                                     <div>
                                         <h4 className="text-4xl font-black tracking-tighter">24h</h4>
-                                        <p className="font-bold text-sm uppercase leading-tight">Average Fulfillment <br /> Speed Improvement</p>
+                                        <p className="font-semibold text-sm uppercase leading-tight">Average Fulfillment <br /> Speed Improvement</p>
                                     </div>
                                 </div>
                             </div>
@@ -395,14 +395,14 @@ export default function OnlinePlanetContent() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div className="space-y-12">
                             <div className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.3em] mb-6">Workflow Highlights</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.3em] mb-6">Workflow Highlights</h4>
                                 <div className="space-y-8">
                                     <div className="flex gap-6">
                                         <div className="w-12 h-12 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400 shrink-0">
                                             <Zap size={24} />
                                         </div>
                                         <div>
-                                            <h5 className="text-white font-bold text-lg mb-2">Lifecycle Tracking</h5>
+                                            <h5 className="text-white font-semibold text-lg mb-2">Lifecycle Tracking</h5>
                                             <p className="text-gray-400 text-sm leading-relaxed">
                                                 A comprehensive 12-stage system tracking orders precisely from <span className="text-white italic">Pending</span> through <span className="text-white italic">Packed</span>, <span className="text-white italic">Shipped</span>, and finally <span className="text-white italic">Delivered</span>.
                                             </p>
@@ -413,7 +413,7 @@ export default function OnlinePlanetContent() {
                                             <Settings size={24} />
                                         </div>
                                         <div>
-                                            <h5 className="text-white font-bold text-lg mb-2">Seller Operations</h5>
+                                            <h5 className="text-white font-semibold text-lg mb-2">Seller Operations</h5>
                                             <p className="text-gray-400 text-sm leading-relaxed">
                                                 Empowering merchants with bulk order processing, automated packing slip generation, and internal operational notes for warehouse efficiency.
                                             </p>
@@ -424,7 +424,7 @@ export default function OnlinePlanetContent() {
                                             <Users size={24} />
                                         </div>
                                         <div>
-                                            <h5 className="text-white font-bold text-lg mb-2">Customer Transparency</h5>
+                                            <h5 className="text-white font-semibold text-lg mb-2">Customer Transparency</h5>
                                             <p className="text-gray-400 text-sm leading-relaxed">
                                                 Live tracking portals with automated status timelines and integrated return request systems for a frictionless buyer experience.
                                             </p>
@@ -450,12 +450,12 @@ export default function OnlinePlanetContent() {
                                     ].map((doc, i) => (
                                         <div key={i} className="flex items-center gap-4 py-4 border-b border-black/10">
                                             <div className="w-2 h-2 rounded-full bg-black shrink-0" />
-                                            <span className="font-bold text-xl tracking-tight">{doc}</span>
+                                            <span className="font-semibold text-xl tracking-tight">{doc}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="mt-10 pt-10 border-t border-black/5">
-                                    <p className="text-sm font-bold leading-relaxed">
+                                    <p className="text-sm font-semibold leading-relaxed">
                                         Instant, automated generation of all critical commerce documents, reducing administrative overhead by 100%.
                                     </p>
                                 </div>
@@ -481,28 +481,28 @@ export default function OnlinePlanetContent() {
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 items-start">
                         <div className="space-y-12">
                             <div className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.3em] mb-8">Key Capabilities</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.3em] mb-8">Key Capabilities</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                     <div className="space-y-4">
-                                        <h5 className="text-white font-bold text-lg mb-2">Secure Payments</h5>
+                                        <h5 className="text-white font-semibold text-lg mb-2">Secure Payments</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Fully integrated production-grade financial engine with support for <span className="text-white italic">UPI, Cards, Net Banking</span>, and Digital Wallets.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <h5 className="text-white font-bold text-lg mb-2">Automated Refunds</h5>
+                                        <h5 className="text-white font-semibold text-lg mb-2">Automated Refunds</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Instant full or partial refund processing directly within the platform, ensuring consumer trust and operational speed.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <h5 className="text-white font-bold text-lg mb-2">Seller Payouts</h5>
+                                        <h5 className="text-white font-semibold text-lg mb-2">Seller Payouts</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Automated calculation and transfer of earnings (post-commission) to seller bank accounts with absolute precision.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <h5 className="text-white font-bold text-lg mb-2">Real-Time Reconciliation</h5>
+                                        <h5 className="text-white font-semibold text-lg mb-2">Real-Time Reconciliation</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Automated verification of every transaction using <span className="text-white italic">enterprise-grade security signatures</span> and audit trails.
                                         </p>
@@ -511,7 +511,7 @@ export default function OnlinePlanetContent() {
                             </div>
 
                             <div className="p-10 rounded-[2.5rem] bg-lime-400/5 border border-lime-400/10">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.2em] mb-4">Financial Compliance</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Financial Compliance</h4>
                                 <p className="text-gray-300 text-lg leading-relaxed">
                                     Automatic tax calculation and generation of digital receipts for every stakeholder, ensuring 100% regulatory compliance.
                                 </p>
@@ -521,7 +521,7 @@ export default function OnlinePlanetContent() {
                         <div className="space-y-10">
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
                                 <h4 className="text-4xl font-black tracking-tighter mb-4">100%</h4>
-                                <p className="font-bold text-sm uppercase leading-tight mb-8">Reconciliation <br /> Accuracy Rate</p>
+                                <p className="font-semibold text-sm uppercase leading-tight mb-8">Reconciliation <br /> Accuracy Rate</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     Our financial engine eliminates manual errors by cross-referencing payment gateway tokens with internal ledger entries in real-time.
                                 </p>
@@ -546,16 +546,16 @@ export default function OnlinePlanetContent() {
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20">
                         <div className="space-y-16">
                             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed italic border-l-2 border-lime-500 pl-10 mb-16">
-                                Leveraging <span className="text-white font-bold">Google's advanced Gemini AI models</span> to automate operations, optimize product discovery, and provide intelligent business insights for every stakeholder.
+                                Leveraging <span className="text-white font-semibold">Google's advanced Gemini AI models</span> to automate operations, optimize product discovery, and provide intelligent business insights for every stakeholder.
                             </p>
                             <div className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5">
-                                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                                <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
                                     <Cpu className="text-lime-400" size={24} />
                                     Intelligent Services
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                        <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                             <Zap size={16} />
                                             Listing Automation
                                         </div>
@@ -564,7 +564,7 @@ export default function OnlinePlanetContent() {
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                        <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                             <Layers size={16} />
                                             Smart Categorization
                                         </div>
@@ -573,7 +573,7 @@ export default function OnlinePlanetContent() {
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                        <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                             <TrendingUp size={16} />
                                             Dynamic Pricing
                                         </div>
@@ -582,7 +582,7 @@ export default function OnlinePlanetContent() {
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                        <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                             <Building2 size={16} />
                                             Business Coaching
                                         </div>
@@ -591,7 +591,7 @@ export default function OnlinePlanetContent() {
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                        <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                             <UserCheck size={16} />
                                             AI Assistant
                                         </div>
@@ -607,7 +607,7 @@ export default function OnlinePlanetContent() {
                                     <div className="w-12 h-12 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400">
                                         <BarChart3 size={24} />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white">Internal PPC</h3>
+                                    <h3 className="text-2xl font-semibold text-white">Internal PPC</h3>
                                     <p className="text-gray-400 leading-relaxed">
                                         A proprietary internal advertising network allowing sellers to bid for visibility, track ROAS, and optimize conversions through real-time metrics.
                                     </p>
@@ -619,9 +619,9 @@ export default function OnlinePlanetContent() {
                                     <Bot size={120} className="text-lime-400" />
                                 </div>
                                 <div className="relative z-10 max-w-2xl">
-                                    <h3 className="text-3xl font-bold text-white mb-6">Gemini AI Business Coaching</h3>
+                                    <h3 className="text-3xl font-semibold text-white mb-6">Gemini AI Business Coaching</h3>
                                     <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                                        We integrated Google's Gemini models to provide every seller with a dedicated <span className="text-lime-400 italic font-bold">Smart Assistant</span>.
+                                        We integrated Google's Gemini models to provide every seller with a dedicated <span className="text-lime-400 italic font-semibold">Smart Assistant</span>.
                                     </p>
                                     <ul className="space-y-4">
                                         {[
@@ -679,7 +679,7 @@ export default function OnlinePlanetContent() {
                             
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
                                 <h4 className="text-4xl font-black tracking-tighter mb-4">-70%</h4>
-                                <p className="font-bold text-sm uppercase leading-tight mb-8">Reduction in Manual <br /> Verification Time</p>
+                                <p className="font-semibold text-sm uppercase leading-tight mb-8">Reduction in Manual <br /> Verification Time</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     By automating the extraction of legal identifiers, we allow legitimate sellers to start their business cycle 70% faster than traditional manual review systems.
                                 </p>
@@ -713,7 +713,7 @@ export default function OnlinePlanetContent() {
                                     <div className="w-12 h-12 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400 mb-6 group-hover:scale-110 transition-transform">
                                         <feature.icon size={24} />
                                     </div>
-                                    <h5 className="text-white font-bold text-lg mb-3">{feature.title}</h5>
+                                    <h5 className="text-white font-semibold text-lg mb-3">{feature.title}</h5>
                                     <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
                                 </div>
                             ))}
@@ -737,21 +737,21 @@ export default function OnlinePlanetContent() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-4">
-                                    <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                    <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                         <Navigation size={16} />
                                         Auto-Detection
                                     </div>
-                                    <h5 className="text-white font-bold text-lg">Automatic Address Detection</h5>
+                                    <h5 className="text-white font-semibold text-lg">Automatic Address Detection</h5>
                                     <p className="text-gray-400 text-sm leading-relaxed">
                                         Uses GPS and mapping technology to detect exact delivery addresses, eliminating manual input errors.
                                     </p>
                                 </div>
                                 <div className="space-y-4">
-                                    <div className="flex items-center gap-3 text-lime-500 font-bold text-sm uppercase tracking-widest">
+                                    <div className="flex items-center gap-3 text-lime-500 font-semibold text-sm uppercase tracking-widest">
                                         <Layers size={16} />
                                         Hyper-Local
                                     </div>
-                                    <h5 className="text-white font-bold text-lg">Hyper-Local Logic</h5>
+                                    <h5 className="text-white font-semibold text-lg">Hyper-Local Logic</h5>
                                     <p className="text-gray-400 text-sm leading-relaxed">
                                         Automatically extracts street, city, and pincode for perfect delivery accuracy and routing efficiency.
                                     </p>
@@ -766,7 +766,7 @@ export default function OnlinePlanetContent() {
                                         <Activity size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="text-white font-bold text-xl mb-2">Instant Delivery Promises</h5>
+                                        <h5 className="text-white font-semibold text-xl mb-2">Instant Delivery Promises</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Real-time calculation of delivery dates based on the user's specific location and the nearest vendor fulfillment center.
                                         </p>
@@ -777,7 +777,7 @@ export default function OnlinePlanetContent() {
                                         <Zap size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="text-white font-bold text-xl mb-2">Smart Checkout</h5>
+                                        <h5 className="text-white font-semibold text-xl mb-2">Smart Checkout</h5>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Pre-filled address information minimizes friction, reducing checkout time by an average of 45 seconds.
                                         </p>
@@ -813,7 +813,7 @@ export default function OnlinePlanetContent() {
                                     <div className="w-12 h-12 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400 mb-4">
                                         <Mail size={24} />
                                     </div>
-                                    <h5 className="text-white font-bold text-lg">Omni-Channel Alerts</h5>
+                                    <h5 className="text-white font-semibold text-lg">Omni-Channel Alerts</h5>
                                     <p className="text-gray-400 text-sm leading-relaxed">
                                         Automated notifications delivered across <span className="text-white italic">WhatsApp, SMS, and Email</span>, ensuring 100% reachability regardless of the user's preferred platform.
                                     </p>
@@ -822,7 +822,7 @@ export default function OnlinePlanetContent() {
                                     <div className="w-12 h-12 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400 mb-4">
                                         <Zap size={24} />
                                     </div>
-                                    <h5 className="text-white font-bold text-lg">Event-Driven Messaging</h5>
+                                    <h5 className="text-white font-semibold text-lg">Event-Driven Messaging</h5>
                                     <p className="text-gray-400 text-sm leading-relaxed">
                                         Instant alerts triggered by real-time events: Order Confirmations, Shipping Updates, Out-for-Delivery status, and Refund processing.
                                     </p>
@@ -830,9 +830,9 @@ export default function OnlinePlanetContent() {
                             </div>
 
                             <div className="p-10 rounded-[2.5rem] bg-lime-400/5 border border-lime-400/10">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.2em] mb-4">Professional Experience</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Professional Experience</h4>
                                 <p className="text-gray-300 text-lg leading-relaxed">
-                                    Every notification is powered by <span className="text-white font-bold">Branded Professional Templates</span>, ensuring a premium and consistent customer experience that reinforces brand trust.
+                                    Every notification is powered by <span className="text-white font-semibold">Branded Professional Templates</span>, ensuring a premium and consistent customer experience that reinforces brand trust.
                                 </p>
                             </div>
                         </div>
@@ -840,7 +840,7 @@ export default function OnlinePlanetContent() {
                         <div className="space-y-8">
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
                                 <h4 className="text-4xl font-black tracking-tighter mb-4">Instant</h4>
-                                <p className="font-bold text-sm uppercase leading-tight mb-8">Delivery Pulse <br /> Notifications</p>
+                                <p className="font-semibold text-sm uppercase leading-tight mb-8">Delivery Pulse <br /> Notifications</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     Eliminating anxiety through transparency. Users receive micro-updates at every critical status shift in the order lifecycle.
                                 </p>
@@ -865,7 +865,7 @@ export default function OnlinePlanetContent() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
                         <div className="space-y-12">
                             <div className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.3em] mb-6">Seller Operations Hub</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.3em] mb-6">Seller Operations Hub</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                     {[
                                         { title: "Real-Time Analytics", desc: "Granular revenue and visitor monitoring." },
@@ -874,7 +874,7 @@ export default function OnlinePlanetContent() {
                                         { title: "Supply Chain", desc: "End-to-end warehouse and supplier tracking." }
                                     ].map((item, i) => (
                                         <div key={i} className="p-5 rounded-2xl bg-zinc-900 border border-white/5">
-                                            <p className="text-white font-bold text-lg mb-1">{item.title}</p>
+                                            <p className="text-white font-semibold text-lg mb-1">{item.title}</p>
                                             <p className="text-gray-500 text-xs leading-tight">{item.desc}</p>
                                         </div>
                                     ))}
@@ -882,10 +882,10 @@ export default function OnlinePlanetContent() {
                             </div>
 
                             <div className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5">
-                                <h4 className="text-lime-400 font-bold text-xs uppercase tracking-[0.3em] mb-6">Sophisticated Business Engines</h4>
+                                <h4 className="text-lime-400 font-semibold text-xs uppercase tracking-[0.3em] mb-6">Sophisticated Business Engines</h4>
                                 <div className="space-y-8">
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-white font-bold">
+                                        <div className="flex items-center gap-3 text-white font-semibold">
                                             <TrendingUp size={20} className="text-lime-500" />
                                             Internal PPC Network
                                         </div>
@@ -894,7 +894,7 @@ export default function OnlinePlanetContent() {
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3 text-white font-bold">
+                                        <div className="flex items-center gap-3 text-white font-semibold">
                                             <Zap size={20} className="text-lime-500" />
                                             Dynamic Pricing Engine
                                         </div>
@@ -947,7 +947,7 @@ export default function OnlinePlanetContent() {
                             <div className="p-8 rounded-[3rem] bg-zinc-900/50 border border-white/5 flex items-center justify-center">
                                 <div className="text-center">
                                     <ShoppingCart className="text-lime-500 mx-auto mb-6" size={60} />
-                                    <h4 className="text-2xl font-bold text-white mb-2">Merchant Hub</h4>
+                                    <h4 className="text-2xl font-semibold text-white mb-2">Merchant Hub</h4>
                                     <p className="text-gray-500 text-sm italic">High-Performance Command Center</p>
                                 </div>
                             </div>
@@ -1011,7 +1011,7 @@ export default function OnlinePlanetContent() {
                                 <div className="w-14 h-14 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400 mb-8 group-hover:scale-110 transition-transform">
                                     <feature.icon size={28} />
                                 </div>
-                                <h4 className="text-white font-bold text-2xl mb-4">{feature.title}</h4>
+                                <h4 className="text-white font-semibold text-2xl mb-4">{feature.title}</h4>
                                 <p className="text-gray-400 leading-relaxed text-sm">
                                     {feature.desc}
                                 </p>
@@ -1035,7 +1035,7 @@ export default function OnlinePlanetContent() {
                             <div className="w-14 h-14 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400">
                                 <Database size={28} />
                             </div>
-                            <h3 className="text-3xl font-bold text-white">How we achieved -95% Resource Footprint</h3>
+                            <h3 className="text-3xl font-semibold text-white">How we achieved -95% Resource Footprint</h3>
                             <p className="text-gray-400 leading-relaxed text-justify">
                                 Traditional multi-vendor systems often suffer from redundant data polling. We implemented a <span className="text-white italic">Polyglot Persistence strategy</span>—using MongoDB for flexible schemas and internal memory caching for high-frequency operational data. By moving to an event-driven architecture, we eliminated "N+1" query problems, allowing the entire application to run on 95% less server memory compared to standard marketplace frameworks.
                             </p>
@@ -1045,7 +1045,7 @@ export default function OnlinePlanetContent() {
                             <div className="w-14 h-14 rounded-2xl bg-lime-400/10 flex items-center justify-center text-lime-400">
                                 <Zap size={28} />
                             </div>
-                            <h3 className="text-3xl font-bold text-white">How we achieved +60% Search Speed</h3>
+                            <h3 className="text-3xl font-semibold text-white">How we achieved +60% Search Speed</h3>
                             <p className="text-gray-400 leading-relaxed text-justify">
                                 Instead of standard full-table scans, we architected a <span className="text-white italic">Multi-Attribute Search Pipeline</span>. We utilized Redis for real-time category caching and implemented specialized MongoDB aggregation pipelines with compound indexing. This ensures that even with 49+ complex datasets, sub-millisecond query responses are maintained across 140+ endpoints.
                             </p>
@@ -1060,29 +1060,29 @@ export default function OnlinePlanetContent() {
                             { value: "100%", label: "Feature Depth", sub: "Automated Lifecycle Hub" },
                         ].map((stat, i) => (
                             <div key={i} className="text-center group">
-                                <h3 className="text-7xl md:text-8xl font-bold text-white tracking-tighter mb-4 group-hover:text-lime-400 transition-colors">
+                                <h3 className="text-7xl md:text-8xl font-semibold text-white tracking-tighter mb-4 group-hover:text-lime-400 transition-colors">
                                     {stat.value}
                                 </h3>
-                                <p className="text-lime-500 text-xs font-bold uppercase tracking-[0.3em] mb-2">{stat.label}</p>
+                                <p className="text-lime-500 text-xs font-semibold uppercase tracking-[0.3em] mb-2">{stat.label}</p>
                                 <p className="text-gray-500 text-sm italic font-serif">{stat.sub}</p>
                             </div>
                         ))}
                     </div>
 
                     <div className="mt-40 p-20 rounded-[3rem] bg-gradient-to-t from-lime-400/[0.05] to-transparent border border-white/5 flex flex-col items-center">
-                        <h3 className="text-4xl font-bold text-white mb-8">Project Status: <span className="text-lime-400 itali">Production-Ready</span></h3>
+                        <h3 className="text-4xl font-semibold text-white mb-8">Project Status: <span className="text-lime-400 itali">Production-Ready</span></h3>
                         <p className="text-gray-400 text-center max-w-2xl text-lg leading-relaxed mb-12">
-                            Online Planet is currently deployed on <span className="text-white font-bold">Enterprise Cloud Infrastructure</span>, managing a global e-commerce scope with sub-millisecond precision. It stands as a testament to the next generation of automated digital commerce.
+                            Online Planet is currently deployed on <span className="text-white font-semibold">Enterprise Cloud Infrastructure</span>, managing a global e-commerce scope with sub-millisecond precision. It stands as a testament to the next generation of automated digital commerce.
                         </p>
 
                         <div className="flex flex-wrap gap-8 justify-center">
                             <MagneticButton strength={0.2}>
-                                <a href="#contact" className="px-12 py-6 bg-white text-black rounded-full font-bold text-xl hover:bg-lime-400 transition-all hover:scale-105 shadow-2xl">
+                                <a href="#contact" className="px-12 py-6 bg-white text-black rounded-full font-semibold text-xl hover:bg-lime-400 transition-all hover:scale-105 shadow-2xl">
                                     Discuss Collaboration
                                 </a>
                             </MagneticButton>
                             <MagneticButton strength={0.2}>
-                                <Link href="/#work" className="px-12 py-6 border border-white/10 text-white rounded-full font-bold text-xl hover:bg-white/5 transition-all">
+                                <Link href="/#work" className="px-12 py-6 border border-white/10 text-white rounded-full font-semibold text-xl hover:bg-white/5 transition-all">
                                     Browse More Work
                                 </Link>
                             </MagneticButton>

@@ -13,7 +13,7 @@ const JourneyMilestone = ({ icon: Icon, title, description, year, index, total }
             className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-4 mb-20"
         >
             {/* Visual background number */}
-            <span className="absolute z-0 opacity-20 top-1/2 left-1/2 translate-x-1/2 -translate-y-1/2 text-[30vw] font-bold text-foreground/[0.02] select-none pointer-events-none italic">
+            <span className="absolute z-0 opacity-20 top-1/2 left-1/2 translate-x-1/2 -translate-y-1/2 text-[30vw] font-semibold text-foreground/[0.02] select-none pointer-events-none italic">
                 0{index + 1}
             </span>
 
@@ -24,15 +24,15 @@ const JourneyMilestone = ({ icon: Icon, title, description, year, index, total }
                 </div>
 
                 <div className="flex flex-col items-center gap-4 mb-8">
-                    <span className="text-xs font-bold uppercase tracking-[0.5em] text-lime-600 dark:text-lime-400 px-4 py-1 border border-lime-500/20 rounded-full bg-lime-500/5">
+                    <span className="text-xs font-semibold uppercase tracking-[0.5em] text-lime-600 dark:text-lime-400 px-4 py-1 border border-lime-500/20 rounded-full bg-lime-500/5">
                         {year}
                     </span>
-                    <h3 className="text-5xl md:text-8xl font-bold text-foreground tracking-tighter leading-none italic font-serif">
+                    <h3 className="text-4xl md:text-6xl font-semibold text-foreground tracking-tighter leading-none italic font-serif">
                         {title}
                     </h3>
                 </div>
 
-                <p className="text-xl md:text-3xl text-foreground/50 leading-relaxed font-light tracking-tight max-w-3xl">
+                <p className="text-lg md:text-2xl text-foreground/50 leading-relaxed font-light tracking-tight max-w-3xl">
                     {description}
                 </p>
 
@@ -123,10 +123,10 @@ export default function JourneySection() {
                         viewport={{ once: true }}
                         className="w-16 h-[1px] bg-lime-500 mb-8"
                     />
-                    <h2 className="text-2xl md:text-3xl font-bold text-lime-600 dark:text-lime-400 uppercase tracking-[0.4em] mb-4">
+                    <h2 className="text-2xl md:text-3xl font-semibold text-lime-600 dark:text-lime-400 uppercase tracking-[0.4em] mb-4">
                         The Odyssey
                     </h2>
-                    <h2 className="text-7xl md:text-[160px] font-bold text-foreground tracking-tighter leading-none mb-12">
+                    <h2 className="text-6xl md:text-9xl font-semibold text-foreground tracking-tighter leading-none mb-12">
                         A Life in <br />
                         <motion.span
                             style={{ opacity: scrollYProgress }}
@@ -152,7 +152,7 @@ export default function JourneySection() {
                     transition={{ duration: 2, repeat: Infinity }}
                     className="flex flex-col items-center gap-4 text-foreground/30"
                 >
-                    <span className="text-[10px] uppercase font-bold tracking-widest">Keep Exploring</span>
+                    <span className="text-[10px] uppercase font-semibold tracking-widest">Keep Exploring</span>
                     <Zap size={14} className="text-lime-500" />
                 </motion.div>
             </div>

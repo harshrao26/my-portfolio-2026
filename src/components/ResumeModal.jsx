@@ -33,7 +33,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                                     <FileText className="text-lime-600 dark:text-lime-400" size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-black dark:text-white">Harsh D. Rao Resume</h3>
+                                    <h3 className="text-xl font-semibold text-black dark:text-white">Harsh D. Rao Resume</h3>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">Full Stack Developer</p>
                                 </div>
                             </div>
@@ -43,14 +43,14 @@ export default function ResumeModal({ isOpen, onClose }) {
                                     href="/resume"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 px-4 py-2 bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-full text-sm font-bold hover:bg-black/10 dark:hover:bg-white/10 transition-all"
+                                    className="flex items-center gap-2 px-4 py-2 bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-full text-sm font-semibold hover:bg-black/10 dark:hover:bg-white/10 transition-all"
                                 >
                                     <ExternalLink size={18} />
                                     Full Page
                                 </a>
                                 <button
                                     onClick={() => window.print()}
-                                    className="flex items-center gap-2 px-4 py-2 bg-lime-400 text-black rounded-full text-sm font-bold hover:scale-105 transition-all shadow-lg shadow-lime-400/20"
+                                    className="flex items-center gap-2 px-4 py-2 bg-lime-400 text-black rounded-full text-sm font-semibold hover:scale-105 transition-all shadow-lg shadow-lime-400/20"
                                 >
                                     <Download size={18} />
                                     Save PDF

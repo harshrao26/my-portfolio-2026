@@ -27,9 +27,9 @@ export default function TestimonialsSection() {
                     <div className="max-w-2xl">
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-10 h-[1px] bg-lime-500 dark:bg-lime-400" />
-                            <span className="text-lime-600 dark:text-lime-400 font-bold text-xs uppercase tracking-widest">Kind Words</span>
+                            <span className="text-lime-600 dark:text-lime-400 font-semibold text-xs uppercase tracking-widest">Kind Words</span>
                         </div>
-                        <h2 className="text-6xl md:text-8xl font-bold text-foreground tracking-tighter leading-none">
+                        <h2 className="text-6xl md:text-8xl font-semibold text-foreground tracking-tighter leading-none">
                             Trusted by <br />
                             <span className="italic font-serif font-normal text-lime-600 dark:text-lime-400">innovators</span>.
                         </h2>

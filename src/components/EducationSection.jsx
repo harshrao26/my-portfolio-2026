@@ -31,23 +31,23 @@ export default function EducationSection() {
       <div className="container-custom max-w-7xl mx-auto">
 
         {/* Top Minimal Label */}
-        <div className="mb-8">
-          <p className="text-lime-600 dark:text-lime-400 font-serif italic text-xl tracking-widest leading-none">/ Academic Narrative</p>
+        <div className="mb-6">
+          <p className="text-lime-600 dark:text-lime-400 font-serif italic text-sm tracking-[0.2em] leading-none uppercase">/ Academic Narrative</p>
         </div>
 
         {/* Hero Heading */}
-        <div className="mb-24">
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] text-foreground">
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] text-foreground">
             Building Foundations <br />
             <span className="text-foreground/20 italic font-serif">since 2015.</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
 
           {/* Left Column: Focused Persona */}
           <div className="lg:col-span-5 space-y-12">
-            <div className="relative aspect-[4/5] w-full rounded-[3rem] overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 group shadow-2xl transition-all duration-700 hover:shadow-lime-500/10">
+            <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 rounded-[2.5rem] overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 group shadow-2xl transition-all duration-700 hover:shadow-lime-500/10">
               <Image
                 src="/mypic2.png"
                 alt="Portrait"
@@ -58,9 +58,9 @@ export default function EducationSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity" />
 
               <div className="absolute bottom-10 left-10 text-white">
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 opacity-50">Profile</p>
-                <h4 className="text-2xl font-bold">Harsh D. Rao</h4>
-                <p className="text-xs text-white/60">Software Engineer & Designer</p>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] mb-2 opacity-50">Profile</p>
+                <h4 className="text-xl font-semibold">Harsh D. Rao</h4>
+                <p className="text-[10px] text-white/60 uppercase tracking-widest">Software Engineer & Designer</p>
               </div>
             </div>
           </div>
@@ -71,15 +71,15 @@ export default function EducationSection() {
               {education.map((item, idx) => (
                 <div
                   key={idx}
-                  className="group grid grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] py-12 border-t border-black/5 dark:border-white/5 items-center gap-6 transition-all hover:bg-black/[0.02] dark:hover:bg-white/[0.02] px-4"
+                  className="group grid grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] py-10 border-t border-black/5 dark:border-white/5 items-center gap-6 transition-all hover:bg-black/[0.02] dark:hover:bg-white/[0.02] px-4"
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors tracking-tight">
+                  <h3 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors tracking-tight">
                     {item.degree}
                   </h3>
-                  <p className="text-foreground/40 text-sm md:text-base group-hover:text-foreground/60 transition-colors">
+                  <p className="text-foreground/50 text-xs md:text-sm group-hover:text-foreground/80 transition-colors">
                     {item.school}
                   </p>
-                  <p className="text-foreground/10 font-bold tracking-widest md:text-right text-xs md:text-sm group-hover:text-foreground transition-colors uppercase">
+                  <p className="text-foreground/20 font-semibold tracking-widest md:text-right text-[10px] group-hover:text-foreground transition-colors uppercase">
                     {item.date}
                   </p>
                 </div>

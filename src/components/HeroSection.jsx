@@ -36,7 +36,7 @@ export default function HeroSection() {
 
         {/* IMAGE - Now positioned BEHIND the text */}
         <div className="absolute inset-0 z-40 flex items-center justify-center transition-all">
-          <div className="relative w-[300px] h-[400px] sm:w-[500px] sm:h-[650px] lg:w-[600px] lg:h-[800px] mt-96 opacity-90 dark:opacity-100">
+          <div className="relative w-[280px] h-[380px] sm:w-[450px] sm:h-[600px] lg:w-[550px] lg:h-[750px] mt-80 opacity-90 dark:opacity-100">
             <Image
               src="/1000453382.png"
               alt="Harsh Portrait"
@@ -48,11 +48,11 @@ export default function HeroSection() {
         </div>
 
         {/* TEXT - Positioned in FRONT */}
-        <div className="relative z-20 flex flex-col items-center text-center pointer-events-none mb-40 md:mb-64">
-          <h1 className="text-foreground text-6xl md:text-9xl font-bold tracking-tight drop-shadow-sm dark:drop-shadow-2xl">
+        <div className="relative z-20 flex flex-col items-center text-center pointer-events-none mb-32 md:mb-56">
+          <h1 className="text-foreground text-5xl md:text-8xl font-semibold tracking-tight drop-shadow-sm dark:drop-shadow-2xl">
             Hi I'm <span className='text-lime-600 dark:text-lime-400'>Harsh</span><span className='text-foreground/50 animate-pulse'>!</span>
           </h1>
-          <h2 className="font-serif italic text-foreground text-4xl md:text-[140px] leading-none opacity-95 drop-shadow-sm dark:drop-shadow-2xl whitespace-nowrap">
+          <h2 className="font-serif italic text-foreground text-4xl md:text-7xl lg:text-8xl leading-none opacity-95 drop-shadow-sm dark:drop-shadow-2xl whitespace-nowrap">
             Full Stack Developer
           </h2>
         </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
         <MagneticButton strength={0.3}>
           <a
             href="#contact"
-            className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full font-bold text-lg hover:bg-lime-600 dark:hover:bg-lime-400 transition-all hover:scale-105 shadow-xl block text-center"
+            className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold text-lg hover:bg-lime-600 dark:hover:bg-lime-400 transition-all hover:scale-105 shadow-xl block text-center"
           >
             Start a Project
           </a>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           <a
             href="/resume.pdf"
             download
-            className="px-8 py-4 bg-white/10 dark:bg-white/5 text-foreground border border-black/10 dark:border-white/10 rounded-full font-bold text-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2 backdrop-blur-md block text-center"
+            className="px-8 py-4 bg-white/10 dark:bg-white/5 text-foreground border border-black/10 dark:border-white/10 rounded-full font-semibold text-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2 backdrop-blur-md block text-center"
           >
             <Download size={20} />
             My Resume

@@ -68,18 +68,18 @@ export default function ProjectsSection() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-[1px] bg-lime-500 dark:bg-lime-400" />
-              <span className="text-lime-600 dark:text-lime-400 font-bold text-xs uppercase tracking-widest">Selected Works</span>
+              <span className="text-lime-600 dark:text-lime-400 font-semibold text-xs uppercase tracking-widest">Selected Works</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tighter">
+            <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-6 tracking-tighter leading-tight">
               Crafting <span className="italic font-serif font-normal">digital</span> resilience.
             </h2>
-            <p className="text-foreground/60 text-lg leading-relaxed">
+            <p className="text-foreground/60 text-base leading-relaxed">
               A curated collection of projects where strategy meets high-performance engineering.
               Click on a project to dive into the case study.
             </p>
           </div>
 
-          <div className="flex items-center gap-4 text-xs font-bold text-foreground/50">
+          <div className="flex items-center gap-4 text-xs font-semibold text-foreground/50">
             <span>SCROLL TO EXPLORE</span>
             <div className="w-10 h-10 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center animate-bounce">↓</div>
           </div>
@@ -110,7 +110,7 @@ export default function ProjectsSection() {
             Continuously building and shipping new ideas. More projects coming soon.
           </p>
           <MagneticButton strength={0.3}>
-            <button className="px-10 py-5 bg-foreground text-background rounded-full font-bold hover:scale-105 transition-all shadow-xl text-md">
+            <button className="px-10 py-5 bg-foreground text-background rounded-full font-semibold hover:scale-105 transition-all shadow-xl text-md">
               View All Archives →
             </button>
           </MagneticButton>

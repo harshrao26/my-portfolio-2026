@@ -33,7 +33,7 @@ const ResumePage = () => {
 
   const MetricBadge = ({ icon: Icon, label, value, color = "emerald" }) => (
     <div
-      className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-${color}-50 border border-${color}-100 text-${color}-700 text-[10px] font-bold uppercase tracking-wider print:hidden no-print`}
+      className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-${color}-50 border border-${color}-100 text-${color}-700 text-[10px] font-semibold uppercase tracking-wider print:hidden no-print`}
     >
       <Icon className="w-3 h-3" />
       <span>
@@ -119,7 +119,7 @@ const ResumePage = () => {
       <div className="max-w-[850px] mx-auto mb-6 flex flex-wrap justify-between items-center print:hidden no-print px-4 gap-4">
         <div className="flex items-center gap-4">
           <div>
-            <h2 className="text-xl font-bold font-sans text-slate-800 tracking-tight">
+            <h2 className="text-xl font-semibold font-sans text-slate-800 tracking-tight">
               Harsh D. Rao
             </h2>
             <p className="text-xs font-sans text-slate-500 font-medium uppercase tracking-widest leading-none">
@@ -215,7 +215,7 @@ const ResumePage = () => {
             <section
               className={`space-y-2 transition-all duration-300 ${devMode ? "bg-slate-50 p-2 rounded-lg -mx-2 ring-1 ring-slate-100" : ""}`}
             >
-              <h2 className="text-[11pt] font-bold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-2 leading-none">
+              <h2 className="text-[11pt] font-semibold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-2 leading-none">
                 Professional Summary
               </h2>
               <p className="text-[10pt] font-light leading-relaxed text-slate-800">
@@ -238,7 +238,7 @@ const ResumePage = () => {
             <section
               className={`space-y-1 transition-all duration-300 ${devMode ? "bg-emerald-50/30 p-2 rounded-lg -mx-2 ring-1 ring-emerald-100" : ""}`}
             >
-              <h2 className="text-[11pt] font-bold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-2 leading-none">
+              <h2 className="text-[11pt] font-semibold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-2 leading-none">
                 Technical Skills
               </h2>
               <div className="space-y-1 ml-0.5 text-[10pt] font-light leading-relaxed">
@@ -290,7 +290,7 @@ const ResumePage = () => {
 
             {/* Experience Section */}
             <section className="space-y-6">
-              <h2 className="text-[11pt] font-bold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-4 leading-none">
+              <h2 className="text-[11pt] font-semibold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-4 leading-none">
                 Experience / Internship
               </h2>
 
@@ -427,10 +427,10 @@ const ResumePage = () => {
               <div className="grid grid-cols-2 gap-x-8 pt-1 ml-0.5">
                 <div className="space-y-1">
                   <div className="flex justify-between border-b border-black/10 pb-0.5">
-                    <h4 className="font-bold text-[10pt]">
+                    <h4 className="font-semibold text-[10pt]">
                       UnBoxing Community
                     </h4>
-                    <span className="text-[9pt] italic font-bold text-slate-500">
+                    <span className="text-[9pt] italic font-semibold text-slate-500">
                       2 Months
                     </span>
                   </div>
@@ -450,8 +450,8 @@ const ResumePage = () => {
                 </div>
                 <div className="space-y-1">
                   <div className="flex justify-between border-b border-black/10 pb-0.5">
-                    <h4 className="font-bold text-[10pt]">Adi Laxmi Exports</h4>
-                    <span className="text-[9pt] italic font-bold text-slate-500">
+                    <h4 className="font-semibold text-[10pt]">Adi Laxmi Exports</h4>
+                    <span className="text-[9pt] italic font-semibold text-slate-500">
                       1 Month
                     </span>
                   </div>
@@ -474,7 +474,7 @@ const ResumePage = () => {
 
             {/* Projects Section */}
             <section className="space-y-5">
-              <h2 className="text-[11pt] font-bold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-4 leading-none">
+              <h2 className="text-[11pt] font-semibold uppercase tracking-[0.1em] border-b-[1px] border-black pb-0.5 mb-4 leading-none">
                 Projects
               </h2>
 
@@ -729,12 +729,12 @@ const ResumePage = () => {
 
             {/* Education Section */}
             <section className="space-y-1.5 pt-3">
-              <h2 className="text-[12pt] font-bold uppercase tracking-[0.1em] border-b-[1.2px] border-black pb-0.5 mb-2.5 leading-none">
+              <h2 className="text-[12pt] font-semibold uppercase tracking-[0.1em] border-b-[1.2px] border-black pb-0.5 mb-2.5 leading-none">
                 Education
               </h2>
               <div className="flex justify-between items-start ml-0.5">
                 <div className="space-y-1">
-                  <h3 className="text-[11.5pt] font-bold leading-none text-slate-900">
+                  <h3 className="text-[11.5pt] font-semibold leading-none text-slate-900">
                     Bansal Institute of Engineering and Technology
                   </h3>
                   <p className="italic text-[10.5pt] leading-none opacity-90 mt-1 uppercase tracking-tighter text-slate-600">
@@ -742,7 +742,7 @@ const ResumePage = () => {
                   </p>
                 </div>
                 <div className="text-right space-y-1">
-                  <span className="text-[11pt] font-bold">2020 – 2024</span>
+                  <span className="text-[11pt] font-semibold">2020 – 2024</span>
                   <p className="text-[9.5pt] italic opacity-80 leading-none mt-1 font-medium text-slate-500">
                     Lucknow, Uttar Pradesh
                   </p>
@@ -767,7 +767,7 @@ const ResumePage = () => {
         }
 
         .resume-content b,
-        .resume-content .font-bold,
+        .resume-content .font-semibold,
         .resume-content .font-semibold {
           color: #000000;
         }
@@ -806,7 +806,7 @@ const ResumePage = () => {
           }
           .resume-content a {
             color: black !important;
-            font-weight: bold;
+            font-weight: 600;
             text-decoration: none !important;
             display: inline-block !important;
           }

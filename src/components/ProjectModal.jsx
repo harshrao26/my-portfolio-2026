@@ -61,7 +61,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                     </span>
                                 ))}
                             </div>
-                            <h2 className="text-4xl font-bold">{project.title}</h2>
+                            <h2 className="text-4xl font-semibold">{project.title}</h2>
                         </div>
                     </div>
 
@@ -72,7 +72,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                             <section>
                                 <div className="flex items-center gap-3 mb-4 text-lime-600 dark:text-lime-400">
                                     <Target size={20} />
-                                    <span className="text-xs font-bold uppercase tracking-widest">The Challenge</span>
+                                    <span className="text-xs font-semibold uppercase tracking-widest">The Challenge</span>
                                 </div>
                                 <p className="text-foreground/80 leading-relaxed text-lg italic">
                                     "{project.challenge || "Building a scalable solution that balances complex technical requirements with a seamless user experience."}"
@@ -83,7 +83,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                             <section>
                                 <div className="flex items-center gap-3 mb-4 text-lime-600 dark:text-lime-400">
                                     <Layers size={20} />
-                                    <span className="text-xs font-bold uppercase tracking-widest">Our Approach</span>
+                                    <span className="text-xs font-semibold uppercase tracking-widest">Our Approach</span>
                                 </div>
                                 <div className="space-y-4">
                                     <p className="text-foreground/70 leading-relaxed">
@@ -110,15 +110,15 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                             <section>
                                 <div className="flex items-center gap-3 mb-4 text-lime-600 dark:text-lime-400">
                                     <Rocket size={20} />
-                                    <span className="text-xs font-bold uppercase tracking-widest">Impact</span>
+                                    <span className="text-xs font-semibold uppercase tracking-widest">Impact</span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5">
-                                        <p className="text-2xl font-bold text-foreground">99.9%</p>
+                                        <p className="text-2xl font-semibold text-foreground">99.9%</p>
                                         <p className="text-xs text-foreground/50">Uptime achieved</p>
                                     </div>
                                     <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5">
-                                        <p className="text-2xl font-bold text-foreground">40%+</p>
+                                        <p className="text-2xl font-semibold text-foreground">40%+</p>
                                         <p className="text-xs text-foreground/50">Efficiency boost</p>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                     <Link
                                         href={project.link}
                                         onClick={onClose}
-                                        className="flex items-center gap-2 px-8 py-3 bg-lime-500 text-black rounded-full font-bold hover:scale-105 transition-all text-sm shadow-xl"
+                                        className="flex items-center gap-2 px-8 py-3 bg-lime-500 text-black rounded-full font-semibold hover:scale-105 transition-all text-sm shadow-xl"
                                     >
                                         <ArrowUpRight size={18} />
                                         Full Case Study
@@ -140,7 +140,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-bold hover:scale-105 transition-all text-sm"
+                                        className="flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold hover:scale-105 transition-all text-sm"
                                     >
                                         <ExternalLink size={18} />
                                         Live Demo
@@ -148,7 +148,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                 )}
                                 <a
                                     href="#"
-                                    className="flex items-center gap-2 px-6 py-3 border border-black/10 dark:border-white/10 rounded-full font-bold hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm text-foreground"
+                                    className="flex items-center gap-2 px-6 py-3 border border-black/10 dark:border-white/10 rounded-full font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm text-foreground"
                                 >
                                     <Github size={18} />
                                     View Source
