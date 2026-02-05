@@ -1,71 +1,99 @@
 'use client';
+import { Github, Linkedin, Twitter, ArrowUp, Instagram } from 'lucide-react';
+import MagneticButton from './MagneticButton';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <footer className="py-16 border-t border-white/10">
-            <div className="container-custom">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                    {/* Brand */}
-                    <div>
-                        <h3 className="text-2xl font-serif italic text-white mb-4">Harsh Vaibhav</h3>
-                        <p className="text-gray-400">
-                            Product Designer crafting intuitive digital experiences.
+        <footer className="bg-background pt-32 pb-16 relative transition-colors duration-500 overflow-hidden">
+            <div className="container-custom relative z-10">
+
+                {/* Large Branding Section */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/5 dark:border-white/5 pb-24 mb-16 gap-12">
+                    <div className="max-w-xl">
+                        <h3 className="text-8xl md:text-[120px] font-serif italic text-foreground leading-none tracking-tighter mb-8">
+                            Harsh<span className="text-lime-600 dark:text-lime-400">.</span>
+                        </h3>
+                        <p className="text-2xl text-foreground font-medium tracking-tight">
+                            Software Engineer & Product Designer <br />
+                            <span className="text-foreground/40">Lucknow, India</span>
                         </p>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-                        <div className="flex flex-col gap-3">
-                            <a href="#work" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Work
-                            </a>
-                            <a href="#about" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                About
-                            </a>
-                            <a href="#process" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Process
-                            </a>
-                            <a href="#contact" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Contact
-                            </a>
+                    <MagneticButton strength={0.4}>
+                        <button
+                            onClick={scrollToTop}
+                            className="w-20 h-20 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group hover:bg-foreground transition-all duration-500"
+                        >
+                            <ArrowUp className="text-foreground group-hover:text-background transition-colors" />
+                        </button>
+                    </MagneticButton>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+                    {/* Social links */}
+                    <div className="space-y-6">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Connect</p>
+                        <div className="flex flex-wrap gap-4">
+                            {[
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/harsh-d-rao/" },
+                                { icon: Github, href: "https://github.com/harshrao26" },
+                                { icon: Twitter, href: "#" },
+                                { icon: Instagram, href: "https://www.instagram.com/h.a.r.s.h.u.r.a.o/" }
+                            ].map((social, i) => (
+                                <MagneticButton key={i} strength={0.2}>
+                                    <a href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-white/5 flex items-center justify-center hover:bg-lime-500/10 transition-colors">
+                                        <social.icon size={18} className="text-foreground/60 hover:text-lime-600 dark:hover:text-lime-400 transition-colors" />
+                                    </a>
+                                </MagneticButton>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Social */}
-                    <div>
-                        <h4 className="text-white font-semibold mb-4">Connect</h4>
-                        <div className="flex flex-col gap-3">
-                            <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                LinkedIn
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Twitter
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Dribbble
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth">
-                                Behance
-                            </a>
+                    {/* Navigation */}
+                    <div className="space-y-6">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Navigation</p>
+                        <ul className="space-y-4">
+                            {['Work', 'About', 'Experience', 'Notes', 'Contact'].map((item) => (
+                                <li key={item}>
+                                    <a href={`#${item.toLowerCase()}`} className="text-foreground/60 hover:text-foreground transition-colors text-lg font-medium tracking-tight">
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Availability */}
+                    <div className="space-y-6 md:col-span-2">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/30">Current Status</p>
+                        <div className="flex items-center gap-3">
+                            <span className="w-2 h-2 rounded-full bg-lime-500 animate-pulse" />
+                            <p className="text-lg font-medium text-foreground tracking-tight">
+                                Available for freelance & full-time roles starting March 2026.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-400 text-sm">
-                        © {currentYear} Harsh Vaibhav. All rights reserved.
-                    </p>
-                    <div className="flex gap-6">
-                        <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth text-sm">
-                            Privacy Policy
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-lime-400 transition-smooth text-sm">
-                            Terms of Service
-                        </a>
+                {/* Legal & Version */}
+                <div className="pt-12 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
+                        <p className="text-foreground/30 text-xs">
+                            © {currentYear} Harsh Rao. Built with Next.js & Framer Motion.
+                        </p>
+                        <div className="flex gap-6">
+                            <a href="#" className="text-foreground/30 hover:text-foreground text-xs transition-colors">Privacy Policy</a>
+                            <a href="#" className="text-foreground/30 hover:text-foreground text-xs transition-colors">Terms of Use</a>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-foreground/20 text-[10px] font-bold uppercase tracking-[0.2em]">
+                        <span>v2.4.0</span>
                     </div>
                 </div>
             </div>

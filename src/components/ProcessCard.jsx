@@ -1,46 +1,25 @@
-'use client';
-
-export default function ProcessCard({ number, title, description, showLine = false }) {
+export default function ProcessCard({ number, title, description }) {
     return (
-        <div className="relative">
-            <div className="glass-strong rounded-3xl p-8 hover-lift relative overflow-hidden group">
-                {/* Gradient Background */}
-                <div className="absolute inset-0 gradient-radial-lime opacity-10 group-hover:opacity-100 transition-smooth-slow" />
+        <div className="group relative">
+            <div className="relative p-10 rounded-[2.5rem] bg-black/5 dark:bg-zinc-900/40 border border-black/5 dark:border-white/[0.05] hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden h-full">
+                {/* Visual Accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-lime-500/10 rounded-bl-[5rem] translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700" />
 
-                {/* Content */}
                 <div className="relative z-10">
-                    <div className="text-6xl font-light mb-6 text-white/80">{number}</div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">{title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{description}</p>
+                    <span className="text-7xl font-bold text-foreground/5 dark:text-white/5 absolute -top-4 -left-4 select-none group-hover:text-lime-500/10 transition-colors duration-700">
+                        {number}
+                    </span>
+                    
+                    <div className="pt-8">
+                        <h3 className="text-3xl font-bold text-foreground mb-4 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors">
+                            {title}
+                        </h3>
+                        <p className="text-foreground/50 text-lg leading-relaxed">
+                            {description}
+                        </p>
+                    </div>
                 </div>
             </div>
-
-            {/* Connecting Line */}
-            {showLine && (
-                <svg
-                    className="absolute -right-12 top-1/2 -translate-y-1/2 w-24 h-24 hidden lg:block"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M10 50 Q 50 20, 90 50"
-                        stroke="url(#gradient)"
-                        strokeWidth="2"
-                        fill="none"
-                        strokeDasharray="5,5"
-                        className="animate-pulse"
-                    />
-                    <circle cx="90" cy="50" r="4" fill="#c4ff61" />
-                    <circle cx="10" cy="50" r="4" fill="#c4ff61" />
-                    <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#c4ff61" stopOpacity="0.3" />
-                            <stop offset="100%" stopColor="#c4ff61" stopOpacity="1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            )}
         </div>
     );
 }

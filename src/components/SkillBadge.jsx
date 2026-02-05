@@ -8,6 +8,7 @@ export default function SkillBadge({ icon, label, color = 'orange' }) {
     yellow: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
     purple: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
     lime: 'bg-lime-400/10 text-lime-400 border-lime-400/20',
+    green: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
   };
 
   const iconColorClasses = {
@@ -17,6 +18,7 @@ export default function SkillBadge({ icon, label, color = 'orange' }) {
     yellow: 'bg-[#ffd93d]',
     purple: 'bg-[#b84aff]',
     lime: 'bg-[#c4ff61]',
+    green: 'bg-[#10b981]',
   };
 
   return (

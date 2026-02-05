@@ -9,6 +9,22 @@ export default function ProjectsSection() {
 
   const projects = [
     {
+      title: 'Online Planet',
+      description: 'Next-gen enterprise multi-vendor marketplace with AI-powered logistics, OCR onboarding, and real-time financial reconciliation.',
+      challenge: 'Handling complex multi-vendor operations with deep integrations for logistics, payments, and AI-driven automation while maintaining a 95% reduction in server footprint.',
+      features: [
+        'AI-Powered Logistics Hub',
+        'Automated Identity Verification (OCR)',
+        'Gemini AI Business Coaching',
+        '12-Stage Order Management',
+        'Real-time Financial Reconciliation'
+      ],
+      tech: ['Next.js 15', 'Node.js', 'MongoDB', 'Gemini AI', 'Tailwind 4'],
+      tags: ['Enterprise', 'E-Commerce', 'Fintech', 'AI'],
+      image: null,
+      link: '/projects/online-planet',
+    },
+    {
       title: 'Lawfinity Portal',
       description: 'A comprehensive legal-tech management suite designed to automate workflow for law firms in India.',
       challenge: 'Legal professionals handle massive amounts of sensitive data and fragmented workflows. We needed a secure, high-performance platform that simplifies case management.',

@@ -12,6 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import NotesSection from "@/components/NotesSection";
+import JourneySection from "@/components/JourneySection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -43,14 +44,20 @@ export default function Home() {
           <AboutSection />
         </motion.div>
 
-        <motion.div
+          <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
         >
-          <EducationSection />
+          <SkillsSection />
         </motion.div>
+
+        
+
+       
+
+      
 
         <motion.div
           initial="hidden"
@@ -61,14 +68,17 @@ export default function Home() {
           <ExperienceSection />
         </motion.div>
 
-        <motion.div
+
+         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
         >
-          <SkillsSection />
+          <EducationSection />
         </motion.div>
+
+
 
         <motion.div
           initial="hidden"
@@ -78,6 +88,17 @@ export default function Home() {
         >
           <ProjectsSection />
         </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <JourneySection />
+        </motion.div>
+
+      
+
 
         <motion.div
           initial="hidden"
@@ -87,15 +108,7 @@ export default function Home() {
         >
           <NotesSection />
         </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-          <TestimonialsSection />
-        </motion.div>
+ 
 
         <motion.div
           initial="hidden"
@@ -106,6 +119,16 @@ export default function Home() {
           <ContactSection />
         </motion.div>
       </main>
+
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <ProcessSection />
+        </motion.div>
 
       <Footer />
     </div>

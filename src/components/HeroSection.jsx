@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div className="relative w-full max-w-7xl mx-auto px-6 h-[700px] flex items-center justify-center">
 
         {/* IMAGE - Now positioned BEHIND the text */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center transition-all">
+        <div className="absolute inset-0 z-40 flex items-center justify-center transition-all">
           <div className="relative w-[300px] h-[400px] sm:w-[500px] sm:h-[650px] lg:w-[600px] lg:h-[800px] mt-96 opacity-90 dark:opacity-100">
             <Image
               src="/1000453382.png"
@@ -59,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       {/* Footer Section: Trust & CTA */}
-      <div className="relative z-30 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-6 mb-12 mt-[-50px]">
+      <div className="relative z-60 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
         <MagneticButton strength={0.3}>
           <a
             href="#contact"

@@ -1,11 +1,15 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Layers, Target, Rocket } from 'lucide-react';
+import { X, ExternalLink, Github, Layers, Target, Rocket, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+
+import Link from 'next/link';
 
 export default function ProjectModal({ project, isOpen, onClose }) {
     if (!isOpen || !project) return null;
+
+    const isInternalLink = project.link?.startsWith('/');
 
     return (
         <AnimatePresence>
@@ -122,13 +126,26 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
                             {/* Links */}
                             <div className="flex flex-wrap gap-4 pt-8">
-                                <a
-                                    href={project.link}
-                                    className="flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-bold hover:scale-105 transition-all text-sm"
-                                >
-                                    <ExternalLink size={18} />
-                                    Live Demo
-                                </a>
+                                {isInternalLink ? (
+                                    <Link
+                                        href={project.link}
+                                        onClick={onClose}
+                                        className="flex items-center gap-2 px-8 py-3 bg-lime-500 text-black rounded-full font-bold hover:scale-105 transition-all text-sm shadow-xl"
+                                    >
+                                        <ArrowUpRight size={18} />
+                                        Full Case Study
+                                    </Link>
+                                ) : (
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-bold hover:scale-105 transition-all text-sm"
+                                    >
+                                        <ExternalLink size={18} />
+                                        Live Demo
+                                    </a>
+                                )}
                                 <a
                                     href="#"
                                     className="flex items-center gap-2 px-6 py-3 border border-black/10 dark:border-white/10 rounded-full font-bold hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm text-foreground"
