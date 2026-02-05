@@ -10,14 +10,14 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
   const [activeImage, setActiveImage] = useState(null);
 
   return (
-    <div 
+    <div
       className={`group relative py-12 border-t border-black/5 dark:border-white/10 transition-all duration-700 ease-in-out ${isLast ? 'border-b' : ''} cursor-crosshair`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Background Hover Effect */}
       <div className={`absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700`} />
-      
+
       {/* Moving Accent Line */}
       <div className={`absolute left-0 top-0 h-full w-[2px] bg-lime-600 dark:bg-lime-400 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500`} />
 
@@ -31,27 +31,27 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
             onMouseLeave={() => setActiveImage(null)}
             className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-2xl flex items-center justify-center p-10 cursor-zoom-out"
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               className="relative w-full h-full max-w-7xl max-h-[85vh]"
             >
-              <Image 
-                src={activeImage} 
-                alt="Enlarged Milestone" 
-                fill 
+              <Image
+                src={activeImage}
+                alt="Enlarged Milestone"
+                fill
                 className="object-contain rounded-3xl"
                 priority
               />
-              
+
               {/* Close Button */}
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setActiveImage(null);
                 }}
-                className="absolute top-0 -right-16 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white transition-all hover:rotate-90 group/close"
+                className="fixed top-10 right-10 z-[110] w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white transition-all hover:rotate-90 group/close backdrop-blur-md"
               >
                 <X size={24} className="group-hover/close:scale-110" />
               </button>
@@ -62,7 +62,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
 
       <div className="w-full px-6 md:px-12 lg:px-24 relative z-20">
         <div className="flex flex-col md:grid md:grid-cols-[120px_1fr_100px] items-start md:items-center gap-12">
-          
+
           {/* Year Column */}
           <div className="text-xl font-medium text-foreground/50 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors duration-500">
             {year}
@@ -86,11 +86,11 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                 </p>
               </div>
             </div>
-            
+
             {/* Expanded Content */}
             <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isHovered ? 'max-h-[1200px] opacity-100 mt-12' : 'max-h-0 opacity-0'}`}>
               <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 py-8 border-t border-black/5 dark:border-white/5">
-                
+
                 {/* Left Side: Summary & Impact */}
                 <div className="space-y-12">
                   <div className="space-y-6">
@@ -99,7 +99,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                       {summary}
                     </p>
                   </div>
-                  
+
                   <div className="space-y-6">
                     <h4 className="text-lime-600 dark:text-lime-400 text-xs font-bold uppercase tracking-[0.2em]">Core Impact</h4>
                     <ul className="space-y-4">
@@ -128,18 +128,18 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
                       <h4 className="text-foreground/30 text-[10px] font-bold uppercase tracking-[0.3em]">Visual Milestones</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {images.map((img, i) => (
-                          <div 
-                            key={i} 
+                          <div
+                            key={i}
                             onMouseEnter={() => setActiveImage(img)}
                             className="relative aspect-video rounded-xl overflow-hidden border border-white/10 group/img shadow-xl cursor-zoom-in"
                           >
-                             <Image 
-                               src={img} 
-                               alt="Work Snapshot" 
-                               fill 
-                               className="object-cover group-hover/img:scale-110 transition-transform duration-700" 
-                             />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                            <Image
+                              src={img}
+                              alt="Work Snapshot"
+                              fill
+                              className="object-cover group-hover/img:scale-110 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
                           </div>
                         ))}
                       </div>
@@ -165,7 +165,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
           {/* Interaction Hint */}
           <div className="hidden md:flex justify-end pr-4">
             <div className={`w-12 h-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center transition-all duration-500 ${isHovered ? 'bg-lime-500 dark:bg-lime-400 border-lime-500 dark:border-lime-400 -rotate-45' : ''}`}>
-               <ArrowUpRight className={`transition-colors ${isHovered ? 'text-white dark:text-black' : 'text-foreground/20'}`} size={20} />
+              <ArrowUpRight className={`transition-colors ${isHovered ? 'text-white dark:text-black' : 'text-foreground/20'}`} size={20} />
             </div>
           </div>
 
@@ -262,36 +262,36 @@ export default function ExperienceSection() {
 
       <div className="w-full px-6 md:px-12 lg:px-24 relative z-20 mb-32">
         <div className="max-w-4xl">
-           <h2 className="text-7xl md:text-9xl font-bold text-foreground tracking-tighter leading-none mb-8">
-              Work <span className="text-lime-600 dark:text-lime-400">History</span>
-           </h2>
-           <p className="text-xl text-foreground/70 font-serif italic max-w-xl">
-              Selected roles and professional milestones that defined my technical trajectory.
-           </p>
+          <h2 className="text-7xl md:text-9xl font-bold text-foreground tracking-tighter leading-none mb-8">
+            Work <span className="text-lime-600 dark:text-lime-400">History</span>
+          </h2>
+          <p className="text-xl text-foreground/70 font-serif italic max-w-xl">
+            Selected roles and professional milestones that defined my technical trajectory.
+          </p>
         </div>
       </div>
 
       <div className="w-full z-20">
         {experiences.map((exp, index) => (
-          <ExperienceItem 
-            key={index} 
-            {...exp} 
-            isLast={index === experiences.length - 1} 
+          <ExperienceItem
+            key={index}
+            {...exp}
+            isLast={index === experiences.length - 1}
           />
         ))}
       </div>
 
       <div className="w-full px-6 md:px-12 lg:px-24 mt-32 relative z-20 flex flex-col md:flex-row justify-between items-center md:items-end border-t border-black/5 dark:border-white/10 pt-20">
-         <div className="max-w-xs mt-10 text-center md:text-left">
-           <p className="text-xs text-foreground uppercase tracking-[0.3em] font-bold">Involvement</p>
-           <p className="mt-4 text-foreground/50 text-sm">Always looking to push the boundaries of what's possible in the digital realm.</p>
-         </div>
-         <MagneticButton strength={0.4}>
+        <div className="max-w-xs mt-10 text-center md:text-left">
+          <p className="text-xs text-foreground uppercase tracking-[0.3em] font-bold">Involvement</p>
+          <p className="mt-4 text-foreground/50 text-sm">Always looking to push the boundaries of what's possible in the digital realm.</p>
+        </div>
+        <MagneticButton strength={0.4}>
           <a href="/resume.pdf" download className="flex items-center gap-6 group mt-12 md:mt-0">
-             <span className="text-foreground text-3xl font-bold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</span>
-             <ArrowUpRight className="text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:rotate-45 transition-all duration-500 " />
+            <span className="text-foreground text-3xl font-bold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</span>
+            <ArrowUpRight className="text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:rotate-45 transition-all duration-500 " />
           </a>
-         </MagneticButton>
+        </MagneticButton>
       </div>
     </section>
   );

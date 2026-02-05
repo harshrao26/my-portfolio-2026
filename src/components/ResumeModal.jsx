@@ -40,13 +40,21 @@ export default function ResumeModal({ isOpen, onClose }) {
 
                             <div className="flex items-center gap-2">
                                 <a
-                                    href="/resume.pdf"
-                                    download
-                                    className="flex items-center gap-2 px-4 py-2 bg-lime-400 text-black rounded-full text-sm font-bold hover:scale-105 transition-all"
+                                    href="/resume"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-4 py-2 bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-full text-sm font-bold hover:bg-black/10 dark:hover:bg-white/10 transition-all"
+                                >
+                                    <ExternalLink size={18} />
+                                    Full Page
+                                </a>
+                                <button
+                                    onClick={() => window.print()}
+                                    className="flex items-center gap-2 px-4 py-2 bg-lime-400 text-black rounded-full text-sm font-bold hover:scale-105 transition-all shadow-lg shadow-lime-400/20"
                                 >
                                     <Download size={18} />
-                                    Download
-                                </a>
+                                    Save PDF
+                                </button>
                                 <button
                                     onClick={onClose}
                                     className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all text-gray-500 dark:text-gray-400"
@@ -56,32 +64,13 @@ export default function ResumeModal({ isOpen, onClose }) {
                             </div>
                         </div>
 
-                        {/* Resume Content (Iframe or Placeholder) */}
-                        <div className="flex-1 bg-gray-100 dark:bg-[#111] overflow-auto flex flex-col items-center justify-center p-8 text-center">
-                            {/* This would normally be an iframe for the PDF */}
-                            <div className="w-full max-w-2xl aspect-[1/1.4] bg-white dark:bg-black rounded-lg shadow-lg border border-black/5 dark:border-white/10 p-12 flex flex-col gap-8">
-                                <div className="h-8 w-48 bg-gray-200 dark:bg-white/5 rounded animate-pulse" />
-                                <div className="space-y-4">
-                                    <div className="h-4 w-full bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                    <div className="h-4 w-5/6 bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                    <div className="h-4 w-4/6 bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                </div>
-                                <div className="grid grid-cols-2 gap-8">
-                                    <div className="space-y-3">
-                                        <div className="h-6 w-32 bg-gray-200 dark:bg-white/5 rounded animate-pulse" />
-                                        <div className="h-4 w-full bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                        <div className="h-4 w-full bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                    </div>
-                                    <div className="space-y-3">
-                                        <div className="h-6 w-32 bg-gray-200 dark:bg-white/5 rounded animate-pulse" />
-                                        <div className="h-4 w-full bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                        <div className="h-4 w-full bg-gray-100 dark:bg-white/5 rounded animate-pulse" />
-                                    </div>
-                                </div>
-                                <div className="mt-auto pt-10 text-gray-400 dark:text-gray-600 text-sm italic">
-                                    Previewing Resume... Please download for full details.
-                                </div>
-                            </div>
+                        {/* Live Resume Preview */}
+                        <div className="flex-1 bg-white dark:bg-[#111] overflow-hidden">
+                            <iframe
+                                src="/resume"
+                                className="w-full h-full border-none"
+                                title="Harsh D. Rao Resume Preview"
+                            />
                         </div>
                     </motion.div>
                 </div>

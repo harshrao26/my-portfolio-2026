@@ -1,0 +1,294 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Harsh Deep Rao} \\ 
+     Sector-Q, Aliganj, Lucknow \\ 
+    \small \href{tel:+917233811034}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-72338 11034} ~} \href{mailto:harshurao058@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{harshurao058@gmail.com}} ~ 
+    \href{https://my-portfolio-2026-nu.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio}} ~
+    \href{https://www.linkedin.com/in/harsh-d-rao/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{Linkedin}}  ~
+    \href{https://github.com/harshrao26}{\raisebox{-0.2\height}\faGithub\ \underline{Github}}
+\end{center}
+\vspace{-18pt}
+
+
+%-----------SUMMARY-----------
+\section*{SUMMARY}
+\small{Full Stack Developer with 2+ years of experience building high-performance Next.js applications, scalable APIs, and SEO-optimized web platforms. Strong focus on performance engineering, system integration, and production reliability.}
+
+
+
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\vspace{-2pt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ \normalsize{JavaScript (ES6+), TypeScript, Python}} \\
+     \textbf{\normalsize{Technologies \& Frameworks:}}{ \normalsize{Next.js 15, React 19, Node.js, Express.js, MongoDB, Postman, Tailwind CSS, Cloudinary}} \\
+     \textbf{\normalsize{Web Performance \& SEO:}}{ \normalsize{Technical SEO, Schema Markup (JSON-LD), Core Web Vitals (LCP, CLS, INP), Lighthouse Optimization}} \\
+     \textbf{\normalsize{DevOps \& Tools:}}{ \normalsize{DigitalOcean, Nginx, PM2, Docker, Git, Google API, SMTP}} \\
+    }}
+ \end{itemize}
+ \vspace{-8pt}
+
+    
+  
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\vspace{-5pt}
+
+\resumeProjectHeading
+{\href{https://onlineplanet.in/}{\textbf{\large{\underline{Online Planet (Multi-Utility Commerce Platform)}}} \href{https://onlineplanet.in/}{\raisebox{-0.2\height}\faExternalLink }} $|$ \large{\underline{Next.js 15, MongoDB, Gemini AI, Tailwind CSS}}}\\
+\vspace{-15pt}
+
+
+\resumeItemListStart
+\resumeItem{\normalsize{Architected a high-performance marketplace with 140+ API endpoints and a 12-stage automated order lifecycle, significantly reducing server resource consumption through optimized data structures.}}
+\resumeItem{\normalsize{Engineered a deep logistics integration layer with Shiprocket and Ekart, implementing rule-based carrier selection logic to automate status tracking across 15+ checkpoints.}}
+\resumeItem{\normalsize{Integrated Google Gemini AI for automated SEO optimization and metadata generation; built an OCR-based verification system to streamline seller onboarding.}}
+\resumeItem{\normalsize{Developed an internal advertising network with real-time bidding and ROAS tracking, alongside an automated financial suite for payout reconciliation.}}
+\resumeItemListEnd 
+\vspace{-11pt}
+
+
+\resumeProjectHeading
+{\href{https://strucaxis.com/}{\textbf{\large{\underline{StrucAxis (Marketing \& Admin Platform)}}} \href{https://strucaxis.com/}{\raisebox{-0.2\height}\faExternalLink }} $|$ \large{\underline{Next.js, MongoDB, Cloudinary, Google API}}}\\
+\vspace{-15pt}
+\resumeItemListStart
+\resumeItem{\normalsize{Developed a custom Blog CMS and content management platform with secure role-based access control and advanced SEO metadata management.}}
+\resumeItem{\normalsize{Built automated career and project tracking modules with display priority logic and Cloudinary-based media management.}}
+\resumeItem{\normalsize{Implemented a contact pipeline that synchronizes inquiries with Google Sheets via API and triggers SMTP-based email alerts.}}
+\resumeItemListEnd
+\vspace{-11pt}
+
+
+\resumeProjectHeading
+{\href{https://naturemedica.in/}{\textbf{\large{\underline{Nature Medica (Ayurvedic E-Commerce)}}} \href{https://naturemedica.in/}{\raisebox{-0.2\height}\faExternalLink }} $|$ \large{\underline{Next.js 15, MongoDB, Redux Toolkit, Tailwind CSS v4}}}\\
+\vspace{-15pt}
+
+
+\resumeItemListStart
+\resumeItem{\normalsize{Architected a premium Ayurvedic storefront with Next.js 15 and Turbopack, optimizing for sub-2s initial load times and high Core Web Vitals.}}
+\resumeItem{\normalsize{Engineered a tri-integrated logistics engine (Shiprocket, Delhivery, Ekart) with automated AWB generation to streamline fulfillment.}}
+\resumeItem{\normalsize{Built a redundant payment ecosystem with recovery logic for abandoned transactions and partial COD flows to reduce RTO losses.}}
+\resumeItem{\normalsize{Integrated a GA4 DataLayer analysis engine for granular funnel tracking and predictive search intent optimization.}}
+\resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+     
+ 
+
+
+\section{EXPERIENCE / INTERNSHIP}
+  \resumeSubHeadingListStart
+
+    
+
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+  {Lawfinity India PVT. LTD.}{June 2025 - Present}
+  {Full Stack Developer (Full Time)}{Lucknow, India}
+ 
+  \resumeItemListStart
+\resumeItem{\normalsize{Own development and maintenance of high-performance enterprise applications using Next.js 15, TypeScript, and Tailwind CSS.}}
+
+\resumeItem{\normalsize{Architect reusable UI systems and optimize server-side rendering, routing, and server actions for scalability.}}
+\resumeItem{\normalsize{Design and integrate secure backend APIs using Node.js and MongoDB with JWT-based authentication.}}
+\resumeItem{\normalsize{Lead performance engineering efforts to improve SEO, Lighthouse metrics, and Core Web Vitals (LCP, CLS, INP).}}
+\resumeItem{\normalsize{Manage production deployments on DigitalOcean, configuring Nginx, PM2, and automated CI/CD workflows.}}
+  
+  \resumeItemListEnd
+
+ 
+
+\resumeSubheading
+  {Propques Services PVT. LTD.}{Oct 2024 - June 2025}
+  {Full Stack Developer }{Full Time}
+ 
+  \resumeItemListStart
+  
+\resumeItem{\normalsize{The company website, \href{https://propques.com/}{\textbf{{Propques.com}}}, was revamped, leading to a 40\% improvement in load time and a 25\% increase in user engagement.}}
+
+    \resumeItem{\normalsize {APIs were developed and integrated using \textbf{Make}, resulting in a 30\% reduction in data processing time.}}
+    \resumeItem{\normalsize{\textbf{EmailJS} was implemented for efficient email handling, and \textbf{Otpless} was utilized for secure authentication, improving user login success rates by 20\%.}}
+    \resumeItem{\normalsize{Front-end designs were enhanced using \textbf{Predis.ai} and \textbf{Photoshop}, leading to a 35\% increase in user satisfaction based on surveys.}}
+  
+  \resumeItemListEnd
+
+   
+
+  
+    \resumeSubheading
+      {{UnBoxing Community} }{2 Months } 
+      {{React Developer }}{Intern}
+      % {\underline{React Developer Intern}}{Virtual}
+      \resumeItemListStart
+
+ 
+      
+\resumeItem{\normalsize{Integrate frontend components with backend services, working closely with the backend team to ensure seamless data flow and functionality. 
+}}
+\resumeItem{\normalsize{Collaborate with the design team to translate UI/UX wireframes into high-quality code, creating user-friendly and visually appealing components.
+}}
+
+\resumeItemListEnd 
+ 
+ 
+
+\resumeSubheading
+      {Adi Laxmi Exports }{1 Month} 
+      {{Full Stack Developer }}{Intern}
+      \resumeItemListStart
+ 
+      
+\resumeItem{\normalsize{Application performance and scalability were prioritized, leading to a 25\% reduction in page load times across all platforms. }}
+
+
+\resumeItem{\normalsize{Interactive user interfaces were created and optimized using React.js, resulting in a 30\% improvement in user engagement metrics.
+}}
+
+\resumeItemListEnd 
+\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+ 
+
+  %-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bansal Institute of Engineering and Technology}{2020 – 2024}
+      {B.Tech - Computer Science and Engineering}{Lucknow, Uttar Pradesh}
+  \resumeSubHeadingListEnd
+
+
+ 
+ 
+ \end{document}
+ 
