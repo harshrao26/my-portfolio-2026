@@ -13,12 +13,12 @@ export default function Footer() {
     return (
         <footer className="bg-background pt-32 pb-16 relative transition-colors duration-500 overflow-hidden">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bottom-0 z-0">
                 <Image
                     src="/bg1.webp"
                     alt="Footer Background"
                     fill
-                    className="object-cover opacity-20 dark:opacity-10 hue-rotate-[140deg]"
+                    className="object-cove   0 hue-rotate-[140deg]"
                     priority={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="container-custom relative z-10">
 
                 {/* Large Branding Section */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/5 dark:border-white/5 pb-24 mb-16 gap-12">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/5 dark:border-white/5 pb-10 gap-12">
                     <div className="max-w-xl">
                         <h3 className="text-8xl md:text-[120px] font-serif italic text-foreground leading-none tracking-tighter mb-8">
                             Harsh<span className="text-lime-600 dark:text-lime-400">.</span>
@@ -37,14 +37,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <MagneticButton strength={0.4}>
-                        <button
-                            onClick={scrollToTop}
-                            className="w-20 h-20 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group hover:bg-foreground transition-all duration-500"
-                        >
-                            <ArrowUp className="text-foreground group-hover:text-background transition-colors" />
-                        </button>
-                    </MagneticButton>
+                     
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb4">

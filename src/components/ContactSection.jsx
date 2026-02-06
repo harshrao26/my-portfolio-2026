@@ -211,10 +211,10 @@ export default function ContactSection() {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="group flex items-center gap-4 px-12 py-5 bg-foreground text-background rounded-full font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="group flex items-center text-black gap-4 px-12 py-5 bg-lime-500 dark:bg-lime-400 rounded-full font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? 'Sending...' : 'Send Message'}
-                                            <div className="w-8 h-8 rounded-full bg-lime-500 flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <div className="w-8 h-8 rounded-full bg-lime-500 flex items-center justify-center transition-transform group-hover:rotate-45 dark:bg-lime-400">
                                                 <Send size={14} className="text-black" />
                                             </div>
                                         </button>
