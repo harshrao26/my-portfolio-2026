@@ -48,8 +48,7 @@ export default function Footer() {
                             {[
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/harsh-d-rao/" },
                                 { icon: Github, href: "https://github.com/harshrao26" },
-                                { icon: Twitter, href: "#" },
-                                { icon: Instagram, href: "https://www.instagram.com/h.a.r.s.h.u.r.a.o/" }
+                                 { icon: Instagram, href: "https://www.instagram.com/h.a.r.s.h.u.r.a.o/" }
                             ].map((social, i) => (
                                 <MagneticButton key={i} strength={0.2}>
                                     <a href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-white/5 flex items-center justify-center hover:bg-lime-500/10 transition-colors">
@@ -64,7 +63,7 @@ export default function Footer() {
                     <div className="space-y-6">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/30">Navigation</p>
                         <ul className="space-y-4">
-                            {['Work', 'About', 'Experience', 'Notes', 'Contact'].map((item) => (
+                            {['Work', 'About', 'Experience', , 'Contact'].map((item) => (
                                 <li key={item}>
                                     <a href={`#${item.toLowerCase()}`} className="text-foreground/60 hover:text-foreground transition-colors text-lg font-medium tracking-tight">
                                         {item}
