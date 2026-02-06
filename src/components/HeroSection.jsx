@@ -36,7 +36,7 @@ export default function HeroSection() {
 
         {/* IMAGE - Now positioned BEHIND the text */}
         <div className="absolute inset-0 z-40 flex items-center justify-center transition-all">
-          <div className="relative w-[280px] h-[380px] sm:w-[450px] sm:h-[600px] lg:w-[550px] lg:h-[750px]   sm:mt-[500px] md:mt-80  opacity-90 dark:opacity-100">
+          <div className="relative w-[750px] h-[500px] sm:w-[450px] sm:h-[600px] lg:w-[550px] lg:h-[750px]   sm:mt-[500px] md:mt-80  opacity-90 dark:opacity-100">
             <Image
               src="/1000453382.png"
               alt="Harsh Portrait"
@@ -48,7 +48,7 @@ export default function HeroSection() {
         </div>
 
         {/* TEXT - Positioned in FRONT */}
-        <div className="relative z-50 flex flex-col items-center text-center pointer-events-none mb-[400px] sm:mb-[450px] md:mb-80">
+        <div className="relative z-50 flex flex-col items-center text-center pointer-events-none mb-[500px] sm:mb-[450px] md:mb-80">
           <h1 className="text-foreground text-5xl md:text-8xl font-semibold tracking-tight drop-shadow-sm dark:drop-shadow-2xl">
             Hi I'm <span className='text-lime-600 dark:text-lime-400'>Harsh</span><span className='text-foreground/50 animate-pulse'>!</span>
           </h1>
