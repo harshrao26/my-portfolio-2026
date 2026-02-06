@@ -32,34 +32,34 @@ export default function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(138,201,38,0.15)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(196,255,97,0.2)_0%,transparent_70%)] opacity-50 pointer-events-none" />
 
       {/* Main Container for Layered Text and Image */}
-      <div className="relative w-full max-w-7xl mx-auto px-6 h-[700px] flex items-center justify-center">
+      <div className="relative w-full max-w-7xl mx-auto px-6 h-[700px] md:h-[700px] flex items-center justify-center">
 
         {/* IMAGE - Now positioned BEHIND the text */}
         <div className="absolute inset-0 z-40 flex items-center justify-center transition-all">
-          <div className="relative w-[280px] h-[380px] sm:w-[450px] sm:h-[600px] lg:w-[550px] lg:h-[750px] mt-80 opacity-90 dark:opacity-100">
+          <div className="relative w-[280px] h-[380px] sm:w-[450px] sm:h-[600px] lg:w-[550px] lg:h-[750px]   sm:mt-[500px] md:mt-80  opacity-90 dark:opacity-100">
             <Image
               src="/1000453382.png"
               alt="Harsh Portrait"
               fill
-              className="object-contain"
+              className="object-cover w-full h-full"
               priority
             />
           </div>
         </div>
 
         {/* TEXT - Positioned in FRONT */}
-        <div className="relative z-20 flex flex-col items-center text-center pointer-events-none mb-32 md:mb-56">
+        <div className="relative z-50 flex flex-col items-center text-center pointer-events-none mb-[400px] sm:mb-[450px] md:mb-80">
           <h1 className="text-foreground text-5xl md:text-8xl font-semibold tracking-tight drop-shadow-sm dark:drop-shadow-2xl">
             Hi I'm <span className='text-lime-600 dark:text-lime-400'>Harsh</span><span className='text-foreground/50 animate-pulse'>!</span>
           </h1>
-          <h2 className="font-serif italic text-foreground text-4xl md:text-7xl lg:text-8xl leading-none opacity-95 drop-shadow-sm dark:drop-shadow-2xl whitespace-nowrap">
+          <h2 className="font-serif italic text-foreground text-3xl sm:text-4xl md:text-9xl leading-none opacity-95 drop-shadow-sm dark:drop-shadow-2xl whitespace-nowrap">
             Full Stack Developer
           </h2>
         </div>
       </div>
 
       {/* Footer Section: Trust & CTA */}
-      <div className="relative z-60 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
+      {/* <div className="relative z-60 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
         <MagneticButton strength={0.3}>
           <a
             href="#contact"
@@ -70,7 +70,7 @@ export default function HeroSection() {
         </MagneticButton>
         <MagneticButton strength={0.3}>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/uc?export=download&id=1qbdCwxwQsFcnLSvO95z8j1Cmb85rnvLW"
             download
             className="px-8 py-4 bg-white/10 dark:bg-white/5 text-foreground border border-black/10 dark:border-white/10 rounded-full font-semibold text-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2 backdrop-blur-md block text-center"
           >
@@ -78,7 +78,7 @@ export default function HeroSection() {
             My Resume
           </a>
         </MagneticButton>
-      </div>
+      </div> */}
     </section>
   );
 }

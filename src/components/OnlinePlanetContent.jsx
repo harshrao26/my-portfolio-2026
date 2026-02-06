@@ -34,9 +34,9 @@ import {
     Users,
     TrendingUp,
     FileText,
+    Navigation,
 } from "lucide-react";
 import Link from "next/link";
-import Navigation from "@/components/Navigation";
 import MagneticButton from "@/components/MagneticButton";
 import Footer from "@/components/Footer";
 import {
@@ -72,7 +72,7 @@ const COLORS = ['#d1d5db', '#c4ff61'];
 const RoleCard = ({ title, features, role }) => (
     <div className="p-10 rounded-[3rem] bg-zinc-900/50 border border-white/5 relative overflow-hidden group">
         <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-            <span className="text-8xl font-black uppercase tracking-tighter">
+            <span className="text-8xl font-semibold uppercase tracking-tighter">
                 {role}
             </span>
         </div>
@@ -135,7 +135,7 @@ const ImagePlaceholder = ({ label, height = "500px", description }) => (
         </div>
         {description && (
             <div className="mt-4 px-6 py-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <p className="text-gray-500 text-sm italic">{description}</p>
+                <p className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-sm italic">{description}</p>
             </div>
         )}
     </div>
@@ -261,7 +261,7 @@ export default function OnlinePlanetContent() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1, duration: 0.8 }}
-                        className="text-7xl md:text-9xl font-semibold text-white mb-10 tracking-tighter leading-none"
+                        className="text-6xl md:text-7xl font-semibold text-white mb-10 tracking-tighter leading-none"
                     >
                         Online <span className="italic font-serif font-normal text-lime-400">Planet</span>
                     </motion.h1>
@@ -270,7 +270,7 @@ export default function OnlinePlanetContent() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-xl md:text-3xl text-gray-400 max-w-4xl tracking-tight leading-snug mb-20"
+                        className="text-xl md:text-xl text-gray-450 max-w-4xl tracking-tight leading-snug mb-20"
                     >
                         A high-performance <span className="text-white italic">multi-utility commerce platform</span> architected for enterprise-grade scalability, high-speed logistics, and AI-driven business intelligence.
                     </motion.p>
@@ -294,7 +294,7 @@ export default function OnlinePlanetContent() {
                                 <div className="w-8 h-8 relative flex items-center justify-center  group-hover:-0 group-hover:scale-110 transition-all duration-500">
                                     <img src={tech.logo} alt={tech.name} className="w-full h-full object-contain" />
                                 </div>
-                                <span className="text-[10px] font-semibold text-gray-400 tracking-widest uppercase">{tech.name}</span>
+                                <span className="text-sm font-semibold text-gray-400 tracking -widest  ">{tech.name}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -307,7 +307,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-black">
                 <div className="container-custom">
                     <SectionTitle subtitle="Operational Speed" icon={Truck}>
-                        Automated Logistics & <br /> <span className="text-gray-500">Global Fulfillment</span>
+                        Automated Logistics & <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Global Fulfillment</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 items-start">
@@ -363,14 +363,14 @@ export default function OnlinePlanetContent() {
 
                         <div className="space-y-8">
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
-                                <p className="text-xs font-black uppercase tracking-[0.2em] mb-4 opacity-70">Operational Impact</p>
+                                <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-4 opacity-70">Operational Impact</p>
                                 <div className="space-y-6">
                                     <div>
-                                        <h4 className="text-4xl font-black tracking-tighter">80%</h4>
+                                        <h4 className="text-4xl font-semibold tracking-tighter">80%</h4>
                                         <p className="font-semibold text-sm uppercase leading-tight">Reduction in Manual <br /> RTO Intervention</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-4xl font-black tracking-tighter">24h</h4>
+                                        <h4 className="text-4xl font-semibold tracking-tighter">24h</h4>
                                         <p className="font-semibold text-sm uppercase leading-tight">Average Fulfillment <br /> Speed Improvement</p>
                                     </div>
                                 </div>
@@ -389,7 +389,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950/50 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Operational Workflow" icon={ShoppingCart}>
-                        Advanced Order <br /> <span className="text-gray-500">Lifecycle Management</span>
+                        Advanced Order <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Lifecycle Management</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -440,7 +440,7 @@ export default function OnlinePlanetContent() {
 
                         <div className="grid grid-cols-1 gap-8">
                             <div className="p-10 rounded-[3.5rem] bg-lime-400 text-black">
-                                <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 opacity-70">Document Automation</h4>
+                                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-8 opacity-70">Document Automation</h4>
                                 <div className="space-y-6">
                                     {[
                                         "GST-Compliant Tax Invoices",
@@ -475,7 +475,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950/50 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Financial Engine" icon={CreditCard}>
-                        Integrated Payment & <br /> <span className="text-gray-500">Financial Systems</span>
+                        Integrated Payment & <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Financial Systems</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 items-start">
@@ -520,7 +520,7 @@ export default function OnlinePlanetContent() {
 
                         <div className="space-y-10">
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
-                                <h4 className="text-4xl font-black tracking-tighter mb-4">100%</h4>
+                                <h4 className="text-4xl font-semibold tracking-tighter mb-4">100%</h4>
                                 <p className="font-semibold text-sm uppercase leading-tight mb-8">Reconciliation <br /> Accuracy Rate</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     Our financial engine eliminates manual errors by cross-referencing payment gateway tokens with internal ledger entries in real-time.
@@ -540,7 +540,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-black">
                 <div className="container-custom">
                     <SectionTitle subtitle="Intelligence" icon={Bot}>
-                        Artificial Intelligence <br /> <span className="text-gray-500">& Automation</span>
+                        Artificial Intelligence <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">& Automation</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20">
@@ -618,7 +618,7 @@ export default function OnlinePlanetContent() {
                                 <div className="absolute top-0 right-0 p-12 opacity-5">
                                     <Bot size={120} className="text-lime-400" />
                                 </div>
-                                <div className="relative z-10 max-w-2xl">
+                                <div className="relative z-10 max-w-7xl">
                                     <h3 className="text-3xl font-semibold text-white mb-6">Gemini AI Business Coaching</h3>
                                     <p className="text-gray-300 text-lg leading-relaxed mb-8">
                                         We integrated Google's Gemini models to provide every seller with a dedicated <span className="text-lime-400 italic font-semibold">Smart Assistant</span>.
@@ -636,14 +636,7 @@ export default function OnlinePlanetContent() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="mt-12">
-                                        <AIInsightIllustration />
-                                    </div>
-                                    <div className="mt-12 pt-12 border-t border-white/5 flex flex-wrap gap-8 items-center opacity-40 hover:opacity-100 transition-opacity">
-                                        <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/gemini-color.png" className="h-8  hover:-0 transition-all cursor-pointer" alt="Gemini" />
-                                        <img src="https://avatars.githubusercontent.com/u/7713209?s=200&v=4" className="h-6  hover:-0 transition-all cursor-pointer" alt="Razorpay" />
-                                        <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" className="h-6  hover:-0 transition-all cursor-pointer" alt="MongoDB" />
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -668,7 +661,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950/50 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Security & Trust" icon={FileText}>
-                        Automated Identity <br /> <span className="text-gray-500">Verification (OCR)</span>
+                        Automated Identity <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Verification (OCR)</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-center">
@@ -678,7 +671,7 @@ export default function OnlinePlanetContent() {
                             </p>
                             
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
-                                <h4 className="text-4xl font-black tracking-tighter mb-4">-70%</h4>
+                                <h4 className="text-4xl font-semibold tracking-tighter mb-4">-70%</h4>
                                 <p className="font-semibold text-sm uppercase leading-tight mb-8">Reduction in Manual <br /> Verification Time</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     By automating the extraction of legal identifiers, we allow legitimate sellers to start their business cycle 70% faster than traditional manual review systems.
@@ -726,7 +719,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-black">
                 <div className="container-custom">
                     <SectionTitle subtitle="User Experience" icon={MapPin}>
-                        Precise Geolocation & <br /> <span className="text-gray-500">Delivery Estimates</span>
+                        Precise Geolocation & <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Delivery Estimates</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -799,7 +792,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950/50 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Communication" icon={Bell}>
-                        Multi-Channel <br /> <span className="text-gray-500">Notification Engine</span>
+                        Multi-Channel <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Notification Engine</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 items-start">
@@ -839,7 +832,7 @@ export default function OnlinePlanetContent() {
 
                         <div className="space-y-8">
                             <div className="p-10 rounded-[3rem] bg-lime-400 text-black">
-                                <h4 className="text-4xl font-black tracking-tighter mb-4">Instant</h4>
+                                <h4 className="text-4xl font-semibold tracking-tighter mb-4">Instant</h4>
                                 <p className="font-semibold text-sm uppercase leading-tight mb-8">Delivery Pulse <br /> Notifications</p>
                                 <p className="text-sm font-medium leading-relaxed opacity-70">
                                     Eliminating anxiety through transparency. Users receive micro-updates at every critical status shift in the order lifecycle.
@@ -859,7 +852,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-black overflow-hidden border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Governance" icon={ShieldAlert}>
-                        Enterprise Portals & <br /> <span className="text-gray-500">Performance Governance</span>
+                        Enterprise Portals & <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Performance Governance</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
@@ -875,7 +868,7 @@ export default function OnlinePlanetContent() {
                                     ].map((item, i) => (
                                         <div key={i} className="p-5 rounded-2xl bg-zinc-900 border border-white/5">
                                             <p className="text-white font-semibold text-lg mb-1">{item.title}</p>
-                                            <p className="text-gray-500 text-xs leading-tight">{item.desc}</p>
+                                            <p className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-xs leading-tight">{item.desc}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -926,7 +919,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950/30 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Platform Roles" icon={Users}>
-                        Omni-Channel <br /> <span className="text-gray-500 text-5xl">Stakeholder Modules</span>
+                        Omni-Channel <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-5xl">Stakeholder Modules</span>
                     </SectionTitle>
 
                     <div className="space-y-12">
@@ -948,7 +941,7 @@ export default function OnlinePlanetContent() {
                                 <div className="text-center">
                                     <ShoppingCart className="text-lime-500 mx-auto mb-6" size={60} />
                                     <h4 className="text-2xl font-semibold text-white mb-2">Merchant Hub</h4>
-                                    <p className="text-gray-500 text-sm italic">High-Performance Command Center</p>
+                                    <p className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-sm italic">High-Performance Command Center</p>
                                 </div>
                             </div>
                             <RoleCard
@@ -986,7 +979,7 @@ export default function OnlinePlanetContent() {
             <section className="py-40 bg-zinc-950 border-t border-white/5">
                 <div className="container-custom">
                     <SectionTitle subtitle="Core Foundation" icon={ShieldCheck}>
-                        Performance & <br /> <span className="text-gray-500">Platform Security</span>
+                        Performance & <br /> <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent">Platform Security</span>
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1026,7 +1019,7 @@ export default function OnlinePlanetContent() {
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center mb-32">
                         <SectionTitle subtitle="Technical ROI" icon={Zap}>
-                            Impact & <span className="text-gray-500 text-4xl italic font-serif">Engineering Achievements</span>
+                            Impact & <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-4xl italic font-serif">Engineering Achievements</span>
                         </SectionTitle>
                     </div>
 
@@ -1064,7 +1057,7 @@ export default function OnlinePlanetContent() {
                                     {stat.value}
                                 </h3>
                                 <p className="text-lime-500 text-xs font-semibold uppercase tracking-[0.3em] mb-2">{stat.label}</p>
-                                <p className="text-gray-500 text-sm italic font-serif">{stat.sub}</p>
+                                <p className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent text-sm italic font-serif">{stat.sub}</p>
                             </div>
                         ))}
                     </div>

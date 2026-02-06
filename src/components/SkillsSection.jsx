@@ -15,7 +15,7 @@ const SkillCard2 = ({ name, iconUrl }) => {
           className="w-full h-full object-contain filter group-hover:drop-shadow-[0_0_8px_rgba(196,255,97,0.3)] dark:invert-0"
         />
       </div>
-      <p className="relative z-10 text-gray-200 dark:text-gray-900 text-base font-semibold group-hover:text-black dark:group-hover:text-white transition-colors">
+      <p className="relative z-10 text-gray-200   text-base font-  group-hover:text-black dark:group-hover:text-white transition-colors">
         {name}
       </p>
     </div>
@@ -31,7 +31,7 @@ const SkillCard = ({ name, iconUrl }) => {
           className="w-full h-full object-contain filter group-hover:drop-shadow-[0_0_8px_rgba(196,255,97,0.3)] dark:invert-0"
         />
       </div>
-      <p className="relative z-10 text-gray-600 dark:text-gray-100 text-base font-semibold group-hover:text-black dark:group-hover:text-white transition-colors">
+      <p className="relative z-10 text-gray-600 dark:text-gray-100 text-base font-  group-hover:text-black dark:group-hover:text-white transition-colors">
         {name}
       </p>
     </div>

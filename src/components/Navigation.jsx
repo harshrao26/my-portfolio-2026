@@ -1,12 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from './ThemeToggle';
-import ResumeModal from './ResumeModal';
 import MagneticButton from './MagneticButton';
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isResumeOpen, setIsResumeOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     // Add scroll effect for glassmorphism
@@ -24,10 +22,10 @@ export default function Navigation() {
                 <div className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 ${scrolled ? 'bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-2xl' : ''}`}>
 
                     {/* Logo / Name */}
-                    <a href="/" className="text-xl md:text-2xl font-serif italic text-black dark:text-white hover:text-lime-600 dark:hover:text-lime-400 transition-smooth group flex items-center gap-1">
+                    <a href="/" className="text-xl md:text-2xl f  text-black dark:text-white hover:text-lime-600 dark:hover:text-lime-400 transition-smooth group flex items-center gap-1">
                         <span className="font-semibold">Harsh</span>
                         <span className="text-lime-600 dark:text-lime-400">D.</span>
-                        <span>Rao</span>
+                        <span className="font-normal">Rao</span>
                     </a>
 
                     {/* Desktop Menu */}
@@ -42,18 +40,17 @@ export default function Navigation() {
                             Process
                         </a>
 
-                        <ThemeToggle />
-
                         <div className="flex items-center gap-4">
-                            <button
-                                onClick={() => setIsResumeOpen(true)}
+                            <a
+                                href="https://drive.google.com/uc?export=download&id=1qbdCwxwQsFcnLSvO95z8j1Cmb85rnvLW"
+                                download
                                 className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-lime-600 dark:hover:text-lime-400 transition-smooth border border-black/10 dark:border-white/10 px-4 py-2 rounded-full hover:border-lime-400/50"
                             >
                                 Resume
-                            </button>
+                            </a>
                             {/* Get In Touch Button */}
                             <MagneticButton strength={0.4}>
-                                <a href="#contact" className="px-6 py-2.5 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-semibold hover:bg-lime-600 dark:hover:bg-lime-400 transition-all hover:scale-105 active:scale-95 shadow-lg block">
+                                <a href="#contact" className="px-6 py-2.5 bg-lime-500 dark:bg-lime-400 text-white dark:text-black rounded-full text-sm font-semibold hover:bg-lime-600 dark:hover:bg-lime-500 transition-all hover:scale-105 active:scale-95 shadow-lg block">
                                     Get In Touch
                                 </a>
                             </MagneticButton>
@@ -77,21 +74,21 @@ export default function Navigation() {
                     <div className="flex flex-col items-center justify-center h-full gap-8">
                         <a
                             href="#work"
-                            className="text-3xl font-semibold text-white hover:text-lime-400 transition-smooth"
+                            className="text-2xl fo nt-semibold text-white hover:text-lime-400 transition-smooth"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Work
                         </a>
                         <a
                             href="#about"
-                            className="text-3xl font-semibold text-white hover:text-lime-400 transition-smooth"
+                            className="text-2xl fo nt-semibold text-white hover:text-lime-400 transition-smooth"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             About
                         </a>
                         <a
                             href="#process"
-                            className="text-3xl font-semibold text-white hover:text-lime-400 transition-smooth"
+                            className="text-2xl fo nt-semibold text-white hover:text-lime-400 transition-smooth"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Process
@@ -106,7 +103,6 @@ export default function Navigation() {
                     </div>
                 </div>
             </div>
-            <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
         </nav>
     );
 }

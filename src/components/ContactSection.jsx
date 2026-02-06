@@ -1,25 +1,64 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 
 export default function ContactSection() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        console.log('Form submitted:', formData);
-        alert('Thanks for reaching out! I\'ll get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
-        setIsSubmitting(false);
+        setSubmitError(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Redirect to thank you page with name, email, and phone as URL parameters
+                const params = new URLSearchParams({
+                    name: formData.name,
+                    email: formData.email,
+                });
+                
+                // Only add phone if it exists
+                if (formData.phone) {
+                    params.append('phone', formData.phone);
+                }
+
+                router.push(`/thank-you?${params.toString()}`);
+            } else {
+                throw new Error(result.error || 'Failed to send message');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setSubmitError(error.message || 'Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e) => {
@@ -31,6 +70,18 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className="py-40 relative bg-background transition-colors duration-500 overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/bg6.webp"
+                    alt="Contact Background"
+                    fill
+                    className="object-cover opacity-20 dark:opacity-10 hue-rotate-[150deg]"
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/70" />
+            </div>
+
             {/* Background Decor */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-lime-400/[0.05] rounded-full blur-[150px] pointer-events-none" />
 
@@ -98,7 +149,7 @@ export default function ContactSection() {
                             <form onSubmit={handleSubmit} className="space-y-10">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Full Name</label>
+                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Full Name *</label>
                                         <input
                                             type="text"
                                             name="name"
@@ -110,7 +161,7 @@ export default function ContactSection() {
                                         />
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Email Address</label>
+                                        <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Email Address *</label>
                                         <input
                                             type="email"
                                             name="email"
@@ -124,7 +175,19 @@ export default function ContactSection() {
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Message</label>
+                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full bg-transparent border-b border-black/10 dark:border-white/10 py-3 px-1 text-foreground focus:outline-none focus:border-lime-500 transition-colors placeholder:text-foreground/20"
+                                        placeholder="+1 (555) 000-0000"
+                                    />
+                                </div>
+
+                                <div className="space-y-3">
+                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-foreground/40 px-1">Message *</label>
                                     <textarea
                                         name="message"
                                         value={formData.message}
@@ -136,12 +199,19 @@ export default function ContactSection() {
                                     />
                                 </div>
 
+                                {/* Error Message */}
+                                {submitError && (
+                                    <div className="p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-sm">
+                                        {submitError}
+                                    </div>
+                                )}
+
                                 <div className="pt-6">
                                     <MagneticButton strength={0.3}>
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="group flex items-center gap-4 px-12 py-5 bg-foreground text-background rounded-full font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
+                                            className="group flex items-center gap-4 px-12 py-5 bg-foreground text-background rounded-full font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? 'Sending...' : 'Send Message'}
                                             <div className="w-8 h-8 rounded-full bg-lime-500 flex items-center justify-center transition-transform group-hover:rotate-45">

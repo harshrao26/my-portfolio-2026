@@ -61,7 +61,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
       </AnimatePresence>
 
       <div className="w-full px-6 md:px-12 lg:px-24 relative z-20">
-        <div className="flex flex-col md:grid md:grid-cols-[120px_1fr_100px] items-start md:items-center gap-12">
+        <div className="flex flex-col md:grid md:grid-cols-[120px_1fr_100px] items-start md:items-center gap-4">
 
           {/* Year Column */}
           <div className="text-xl font-medium text-foreground/50 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors duration-500">
@@ -72,7 +72,7 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
           <div className="space-y-4">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               {logo && (
-                <div className="relative w-12 h-12 md:w-20 md:h-20 shrink-0 filter grayscale invert dark:invert-0 group-hover:grayscale-0 transition-all duration-700">
+                <div className="relative w-12 h-12 md:w-20 md:h-20 shrink-0 filter  invert dark:invert-0 group-hover:-0 transition-all duration-700">
                   <Image src={logo} alt={company} fill className="object-contain" />
                 </div>
               )}
@@ -256,13 +256,13 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="relative bg-background py-40 overflow-hidden transition-colors duration-500">
+    <section id="experience" className="relative bg-background py-20 overflow-hidden transition-colors duration-500">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(138,201,38,0.05)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(196,255,97,0.1)_0%,transparent_70%)] opacity-50 pointer-events-none transition-colors" />
 
       <div className="w-full px-6 md:px-12 lg:px-24 relative z-20 mb-32">
-        <div className="max-w-4xl">
-          <h2 className="text-6xl md:text-7xl font-semibold text-foreground tracking-tighter leading-none mb-8">
+        <div className="max-w-7xl">
+          <h2 className="text-4xl md:text-6xl font-semibold text-foreground tracking-tighter leading-none mb-4">
             Work <span className="text-lime-600 dark:text-lime-400">History</span>
           </h2>
           <p className="text-lg md:text-xl text-foreground/70 font-serif italic max-w-xl">
@@ -271,7 +271,7 @@ export default function ExperienceSection() {
         </div>
       </div>
 
-      <div className="w-full z-20">
+      <div className="w-full z-20 -mt-20">
         {experiences.map((exp, index) => (
           <ExperienceItem
             key={index}
@@ -281,14 +281,14 @@ export default function ExperienceSection() {
         ))}
       </div>
 
-      <div className="w-full px-6 md:px-12 lg:px-24 mt-32 relative z-20 flex flex-col md:flex-row justify-between items-center md:items-end border-t border-black/5 dark:border-white/10 pt-20">
+      <div className="w-full px-6 md:px-12 lg:px-24 mt-3 relative z-20 flex flex-col md:flex-row justify-between items-center md:items-end border-t border-black/5 dark:border-white/10 pt-20">
         <div className="max-w-xs mt-10 text-center md:text-left">
           <p className="text-xs text-foreground uppercase tracking-[0.3em] font-semibold">Involvement</p>
           <p className="mt-4 text-foreground/50 text-sm">Always looking to push the boundaries of what's possible in the digital realm.</p>
         </div>
         <MagneticButton strength={0.4}>
-          <a href="/resume.pdf" download className="flex items-center gap-6 group mt-12 md:mt-0">
-            <span className="text-foreground text-2xl md:text-4xl font-semibold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</span>
+          <a href="/resume"   className="flex items-center gap-6 group mt-12 md:mt-0">
+            <a href="/resume"   className="text-foreground text-2xl md:text-4xl font-semibold tracking-tighter transition-all group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:tracking-normal group-hover:mr-4">View Full Resume</a>
             <ArrowUpRight className="text-foreground group-hover:text-lime-600 dark:group-hover:text-lime-400 group-hover:rotate-45 transition-all duration-500 " />
           </a>
         </MagneticButton>

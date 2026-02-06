@@ -27,7 +27,7 @@ const JourneyMilestone = ({ icon: Icon, title, description, year, index, total }
                     <span className="text-xs font-semibold uppercase tracking-[0.5em] text-lime-600 dark:text-lime-400 px-4 py-1 border border-lime-500/20 rounded-full bg-lime-500/5">
                         {year}
                     </span>
-                    <h3 className="text-4xl md:text-6xl font-semibold text-foreground tracking-tighter leading-none italic font-serif">
+                    <h3 className="text-5xl md:text-6xl font-semibold text-foreground tracking-tighter leading-none italic font-serif">
                         {title}
                     </h3>
                 </div>
@@ -126,14 +126,14 @@ export default function JourneySection() {
                     <h2 className="text-2xl md:text-3xl font-semibold text-lime-600 dark:text-lime-400 uppercase tracking-[0.4em] mb-4">
                         The Odyssey
                     </h2>
-                    <h2 className="text-6xl md:text-9xl font-semibold text-foreground tracking-tighter leading-none mb-12">
+                    <h2 className="text-6xl md:text-7xl font-semibold text-foreground tracking-tighter leading-none mb-12">
                         A Life in <br />
-                        <motion.span
+                        <span
                             style={{ opacity: scrollYProgress }}
-                            className="italic font-serif font-normal text-foreground/20"
+                            className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent italic font-serif font-normal"
                         >
                             Constant Focus
-                        </motion.span>.
+                        </span>.
                     </h2>
                 </div>
 

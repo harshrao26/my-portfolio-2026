@@ -48,13 +48,15 @@ export default function ResumeModal({ isOpen, onClose }) {
                                     <ExternalLink size={18} />
                                     Full Page
                                 </a>
-                                <button
-                                    onClick={() => window.print()}
+                                <a
+                                    href="https://drive.google.com/uc?export=download&id=1qbdCwxwQsFcnLSvO95z8j1Cmb85rnvLW"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 px-4 py-2 bg-lime-400 text-black rounded-full text-sm font-semibold hover:scale-105 transition-all shadow-lg shadow-lime-400/20"
                                 >
                                     <Download size={18} />
-                                    Save PDF
-                                </button>
+                                    Download PDF
+                                </a>
                                 <button
                                     onClick={onClose}
                                     className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all text-gray-500 dark:text-gray-400"

@@ -105,7 +105,7 @@ const ResumePage = () => {
           className="p-2 text-white hover:text-emerald-400 transition-colors"
         >
           <Mail className="w-5 h-5" />
-        </a>
+        </a> 
         <div className="w-[1px] h-4 bg-white/20 mx-1"></div>
         <button
           onClick={handleDownload}
@@ -126,25 +126,18 @@ const ResumePage = () => {
               Senior Engineering Resume
             </p>
           </div>
-          <div className="h-8 w-[1px] bg-slate-200 ml-2 hidden sm:block"></div>
-          <button
-            onClick={() => setDevMode(!devMode)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-sans text-[10px] font-black uppercase tracking-widest transition-all ${devMode ? "bg-emerald-600 text-white shadow-lg" : "bg-white text-slate-600 border border-slate-200"}`}
-          >
-            <Code2 className="w-3.5 h-3.5" />
-            {devMode ? "Dev Mode: ON" : "Dev Mode: OFF"}
-          </button>
+          
         </div>
         <button
           onClick={handleDownload}
           className="group flex items-center gap-3 bg-black text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-all font-sans text-xs font-black shadow-xl"
         >
           <Download className="w-4 h-4 group-hover:animate-bounce" />
-          GENERATE PDF
+          Download PDF
         </button>
       </div>
 
-      <div className="max-w-[850px] mx-auto bg-white shadow-[0_0_80px_rgba(0,0,0,0.15)] print:shadow-none min-h-[11in] p-[0.5in] sm:p-[0.75in] print:p-[0.25in] print:max-w-none print:w-full transition-all relative border border-slate-100 print:border-none">
+      <div className="max-w-[850px] mx-auto bg-white shadow-[0_0_80px_rgba(0,0,0,0.15)] print:shadow-none min-h-[11in] p-5 sm:p-[0.75in] print:p-[0.25in] print:max-w-none print:w-full transition-all relative border border-slate-100 print:border-none">
         <div className="resume-content relative z-10 text-[11pt] text-black leading-[1.25]">
           {/* Header */}
           <header className="text-center mb-6">

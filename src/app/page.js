@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import EducationSection from "@/components/EducationSection";
@@ -30,7 +29,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen transition-colors duration-500 bg-background">
-      <Navigation />
 
       <main>
         <HeroSection />
@@ -100,14 +98,14 @@ export default function Home() {
       
 
 
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
         >
           <NotesSection />
-        </motion.div>
+        </motion.div> */}
  
 
         <motion.div
@@ -121,14 +119,14 @@ export default function Home() {
       </main>
 
 
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
         >
           <ProcessSection />
-        </motion.div>
+        </motion.div> */}
 
       <Footer />
     </div>

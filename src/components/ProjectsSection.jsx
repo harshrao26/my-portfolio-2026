@@ -1,11 +1,9 @@
 'use client';
-import { useState } from 'react';
+import Link from 'next/link';
 import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
 import MagneticButton from './MagneticButton';
 
 export default function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
@@ -21,39 +19,10 @@ export default function ProjectsSection() {
       ],
       tech: ['Next.js 15', 'Node.js', 'MongoDB', 'Gemini AI', 'Tailwind 4'],
       tags: ['Enterprise', 'E-Commerce', 'Fintech', 'AI'],
-      image: null,
+      image: '/onlineplanetCardBanner.png',
       link: '/projects/online-planet',
     },
-    {
-      title: 'Lawfinity Portal',
-      description: 'A comprehensive legal-tech management suite designed to automate workflow for law firms in India.',
-      challenge: 'Legal professionals handle massive amounts of sensitive data and fragmented workflows. We needed a secure, high-performance platform that simplifies case management.',
-      features: ['Automated Document Generation', 'Case Lifecycle Tracking', 'Secure Client Communication', 'Advanced Search & Analytics'],
-      tech: ['Next.js 15', 'Node.js', 'PostgreSQL', 'Tailwind'],
-      tags: ['Legal Tech', 'SaaS', 'Full Stack'],
-      image: null,
-      link: '#',
-    },
-    {
-      title: 'NovaCubs App',
-      description: 'A modern productivity mobile application with highly intuitive UX and seamless offline-sync capabilities.',
-      challenge: 'The market is saturated with complex productivity apps. Our goal was to strip away the noise and create a lightning-fast experience that works everywhere.',
-      features: ['Offline-First Store (PouchDB)', 'Biometric Auth', 'Custom Widget System', 'Cross-Platform Sync'],
-      tech: ['React Native', 'Firebase', 'State Management'],
-      tags: ['Mobile App', 'UX Research', 'Fintech'],
-      image: null,
-      link: '#',
-    },
-    {
-      title: 'FlowSync Dashboard',
-      description: 'Enterprise-grade visualization dashboard for real-time monitoring of industrial export data.',
-      challenge: 'Adi Laxmi Export needed to visualize gigabytes of real-time sensor data without browser stutter or lag.',
-      features: ['Real-time Kafka Streams', 'D3.js Visualization', 'Low-latency Alerts', 'Predictive Analysis'],
-      tech: ['Kafka', 'React', 'D3.js', 'WebSockets'],
-      tags: ['Data Viz', 'Enterprise', 'Kafka'],
-      image: null,
-      link: '#',
-    },
+
   ];
 
   return (
@@ -71,7 +40,7 @@ export default function ProjectsSection() {
               <span className="text-lime-600 dark:text-lime-400 font-semibold text-xs uppercase tracking-widest">Selected Works</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-semibold text-foreground mb-6 tracking-tighter leading-tight">
-              Crafting <span className="italic font-serif font-normal">digital</span> resilience.
+              My <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent italic font-serif">Projects </span>
             </h2>
             <p className="text-foreground/60 text-base leading-relaxed">
               A curated collection of projects where strategy meets high-performance engineering.
@@ -88,19 +57,18 @@ export default function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="cursor-pointer"
-              onClick={() => setSelectedProject(project)}
+              href={project.link}
+              className="block"
             >
               <ProjectCard
                 title={project.title}
                 description={project.description}
                 tags={project.tags}
                 image={project.image}
-                link={project.link}
               />
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -117,11 +85,6 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      <ProjectModal
-        project={selectedProject}
-        isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 }

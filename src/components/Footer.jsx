@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { Github, Linkedin, Twitter, ArrowUp, Instagram } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 
@@ -11,6 +12,17 @@ export default function Footer() {
 
     return (
         <footer className="bg-background pt-32 pb-16 relative transition-colors duration-500 overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/bg1.webp"
+                    alt="Footer Background"
+                    fill
+                    className="object-cover opacity-20 dark:opacity-10 hue-rotate-[140deg]"
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+            </div>
             <div className="container-custom relative z-10">
 
                 {/* Large Branding Section */}
@@ -35,7 +47,7 @@ export default function Footer() {
                     </MagneticButton>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb4">
                     {/* Social links */}
                     <div className="space-y-6">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/30">Connect</p>
@@ -81,21 +93,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Legal & Version */}
-                <div className="pt-12 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
-                        <p className="text-foreground/30 text-xs">
-                            © {currentYear} Harsh Rao. Built with Next.js & Framer Motion.
-                        </p>
-                        <div className="flex gap-6">
-                            <a href="#" className="text-foreground/30 hover:text-foreground text-xs transition-colors">Privacy Policy</a>
-                            <a href="#" className="text-foreground/30 hover:text-foreground text-xs transition-colors">Terms of Use</a>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2 text-foreground/20 text-[10px] font-semibold uppercase tracking-[0.2em]">
-                        <span>v2.4.0</span>
-                    </div>
-                </div>
+
             </div>
         </footer>
     );

@@ -30,16 +30,13 @@ export default function EducationSection() {
     <section id="education" className="bg-background py-40 text-foreground relative transition-colors duration-500">
       <div className="container-custom max-w-7xl mx-auto">
 
-        {/* Top Minimal Label */}
-        <div className="mb-6">
-          <p className="text-lime-600 dark:text-lime-400 font-serif italic text-sm tracking-[0.2em] leading-none uppercase">/ Academic Narrative</p>
-        </div>
+       
 
         {/* Hero Heading */}
         <div className="mb-20">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] text-foreground">
+          <h2 className="text-5xl md:text-6xl font-semibold tracking-tighter leading-[0.9] text-foreground">
             Building Foundations <br />
-            <span className="text-foreground/20 italic font-serif">since 2015.</span>
+            <span className="bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 bg-clip-text text-transparent italic font-serif">since 2015.</span>
           </h2>
         </div>
 
