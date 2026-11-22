@@ -178,8 +178,32 @@ const ExperienceItem = ({ year, role, company, logo, summary, highlights, growth
 export default function ExperienceSection() {
   const experiences = [
     {
-      year: "2025 — Present",
-      role: "Digital Engineering Lead",
+      year: "2026 — Present",
+      role: "Founder & Principal Engineer",
+      company: "GenForge Studio",
+      logo: "/propques.png",
+      summary: (
+        <>
+          Founded <span className="text-lime-600 dark:text-lime-400 font-semibold underline decoration-lime-500/30 underline-offset-4 tracking-tight">GenForge Studio</span> — a high-performance Next.js and custom SaaS engineering agency delivering production-grade architectures for 10+ clients across India and UAE with 99.9% uptime SLA.
+        </>
+      ),
+      highlights: [
+        "Founder & Lead Architect for boutique SaaS & Next.js agency",
+        "Delivered production architectures for UK, UAE & India clients",
+        "Engineered 8 Model Context Protocol (MCP) AI agent servers",
+        "Full client lifecycle ownership: architecture, DevOps & SEO"
+      ],
+      growth: (
+        <>
+          At GenForge Studio, I operate as <span className="text-lime-500 font-semibold italic">Founder & Principal Engineer</span>, writing core distributed systems, AI agent workflows, and technical SEO architecture that delivers sub-0.8s load times and real commercial results.
+        </>
+      ),
+      tech: ["Next.js 15/16", "React 19", "GCP Cloud Run", "Technical SEO", "MCP", "AI Systems"],
+      images: [],
+    },
+    {
+      year: "2025 — 2026",
+      role: "Founding Technical Member",
       company: "Lawfinity India",
       logo: "/lawfinity.png",
       summary: (
@@ -190,12 +214,12 @@ export default function ExperienceSection() {
       highlights: [
         "Sole Architect of the entire digital infrastructure",
         "Dominated search rankings via custom Tech SEO",
-        "Building proprietary ERPs for Sales, HR & Ops",
-        "Bridging Tech gap between Sales & Operations"
+        "Built proprietary ERPs for Sales, HR & Ops",
+        "Bridged Tech gap between Sales & Operations"
       ],
       growth: (
         <>
-          I didn&apos;t just write code; I <span className="text-lime-500 font-semibold italic">built a business engine.</span> Behind the scenes, I am currently architecting the private software that powers the firm&apos;s internal operations and sales performance.
+          I didn&apos;t just write code; I <span className="text-lime-500 font-semibold italic">built a business engine.</span> Successfully engineered and deployed the private software that powered the firm&apos;s internal operations and sales performance before completing handover in April 2026.
         </>
       ),
       tech: ["DigitalOcean", "Performance", "Technical SEO", "Full-Stack"],

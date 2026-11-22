@@ -111,8 +111,8 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Email me</p>
-                                    <a href="mailto:harshurao058@gmail.com" className="text-base font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
-                                        harshurao058@gmail.com
+                                    <a href="mailto:hello@genforgestudio.com" className="text-base font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
+                                        hello@genforgestudio.com
                                     </a>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export default function ContactSection() {
                                     <Phone className="text-lime-600 dark:text-lime-400" size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Call me</p>
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/30">Official Desk</p>
                                     <a href="tel:+917233811034" className="text-base font-medium text-foreground hover:text-lime-600 dark:hover:text-lime-400 transition-colors tracking-tight">
                                         +91 7233811034
                                     </a>

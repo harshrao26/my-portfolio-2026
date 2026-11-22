@@ -101,7 +101,7 @@ const ResumePage = () => {
         </a>
         <div className="w-[1px] h-4 bg-white/20 mx-1"></div>
         <a
-          href="mailto:harshurao058@gmail.com"
+          href="mailto:hello@genforgestudio.com"
           className="p-2 text-white hover:text-emerald-400 transition-colors"
         >
           <Mail className="w-5 h-5" />
@@ -166,13 +166,13 @@ const ResumePage = () => {
                 <span className="print:text-black">+91-72338 11034</span>
               </a>
               <a
-                href="mailto:harshurao058@gmail.com"
+                href="mailto:hello@genforgestudio.com"
                 className="flex items-center gap-2 print:gap-1 hover:text-emerald-700 transition-all group shrink-0"
               >
                 <div className="p-1.5 bg-slate-50 rounded-full group-hover:bg-emerald-50 transition-colors print:bg-transparent print:p-0 print:border-none">
                   <Mail className="w-3.5 h-3.5 print:w-2.5 print:h-2.5 text-slate-500 group-hover:text-emerald-600 print:text-black" />
                 </div>
-                <span className="print:text-black">harshurao058@gmail.com</span>
+                <span className="print:text-black">hello@genforgestudio.com</span>
               </a>
               <a
                 href="https://my-portfolio-2026-nu.vercel.app/"
@@ -294,11 +294,12 @@ const ResumePage = () => {
                 Experience / Internship
               </h2>
 
+              {/* GenForge Studio */}
               <div className="space-y-1 ml-0.5">
                 <div className="flex justify-between items-baseline mb-0.5">
                   <div className="flex items-center gap-2">
                     <h3 className="text-[11pt] font-semibold">
-                      Lawfinity India PVT. LTD.
+                      GenForge Studio
                     </h3>
                     <MetricBadge
                       icon={CheckCircle2}
@@ -308,7 +309,40 @@ const ResumePage = () => {
                     />
                   </div>
                   <span className="text-[10pt] font-semibold text-slate-800">
-                    June 2025 - Present
+                    March 2026 - Present
+                  </span>
+                </div>
+                <div className="flex justify-between items-baseline text-[9pt] italic">
+                  <span className="font-medium text-slate-500">
+                    Founder & Principal Engineer
+                  </span>
+                  <span className="font-medium uppercase tracking-tighter text-slate-400">
+                    Remote / Lucknow, India
+                  </span>
+                </div>
+                <ul className="custom-list space-y-1 text-[10pt] font-light leading-relaxed mt-2 text-slate-800">
+                  <li>
+                    Founded a boutique Next.js and custom SaaS product engineering studio delivering production-grade web systems for 10+ clients across India and UAE.
+                  </li>
+                  <li>
+                    Engineered 8 Model Context Protocol (MCP) AI agent servers for automated lead generation, competitor ad analysis, and compliance scraping.
+                  </li>
+                  <li>
+                    Standardized Dockerized CI/CD pipelines deploying Next.js applications to GCP Cloud Run, consistently maintaining 95+ Lighthouse and Core Web Vitals.
+                  </li>
+                </ul>
+              </div>
+
+              {/* Lawfinity India */}
+              <div className="space-y-1 ml-0.5 pt-4">
+                <div className="flex justify-between items-baseline mb-0.5">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-[11pt] font-semibold">
+                      Lawfinity India PVT. LTD.
+                    </h3>
+                  </div>
+                  <span className="text-[10pt] font-semibold text-slate-800">
+                    June 2025 - March 2026
                   </span>
                 </div>
                 <div className="flex justify-between items-baseline text-[9pt] italic">
